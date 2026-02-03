@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type SilverSponsorCardProps = {
   title: string;
   sponsorLogo: string;
@@ -24,7 +26,7 @@ function SilverSponsorCard({
       >
         {/* Logo */}
         <div className="flex items-center justify-center">
-          <img
+          <Image
             src={sponsorLogo}
             alt={`Brand logo for ${title}`}
             className="max-h-[18vh] object-contain"

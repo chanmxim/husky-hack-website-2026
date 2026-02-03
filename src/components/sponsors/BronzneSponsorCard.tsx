@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type BronzeSponsorCardProps = {
   title: string;
   sponsorLogo: string;
@@ -26,7 +28,7 @@ function BronzeSponsorCard({
         style={{ border: `2px solid ${borderColour}` }}>
         {/* Logo */}
         <div className="flex items-center justify-center">
-          <img
+          <Image
             src={sponsorLogo}
             alt={`Brand logo for ${title}`}
             className="max-h-[12vw] max-w-[12vw] object-contain"

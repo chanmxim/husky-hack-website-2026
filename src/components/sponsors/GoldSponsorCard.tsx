@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type GoldSponsorCardProps = {
   title: string;
   sponsorLogo: string;
@@ -21,7 +23,7 @@ function GoldSponsorCard({
 
       {/* Logo */}
       <div className="flex items-center justify-center">
-        <img
+        <Image
           src={sponsorLogo}
           alt={`Brand logo for ${title}`}
           className="

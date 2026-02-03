@@ -1,3 +1,4 @@
+import NavBar from "./components/Nav";
 import HeroSection from "./components/landing-page-sections/HeroSection";
 import AboutUsSection from "./components/landing-page-sections/AboutUsSection";
 // import ScheduleSection from "./components/landing-page-sections/ScheduleSection";
@@ -7,13 +8,19 @@ import TeamSection from "./components/landing-page-sections/TeamSection";
 import FooterSection from "./components/landing-page-sections/FooterSection";
 import ContactSection from "./components/landing-page-sections/ContactSection";
 import ScheduleSection from "./components/landing-page-sections/ScheduleSection";
+import WhatToExpectSection from "./components/landing-page-sections/WhatToExpectSection";
+import CaveDecorationWrapper from "./utils/landingPage/CaveDecorationWrapper";
 
 export default function Home() {
     return (
         <>
+            <NavBar />
             <HeroSection />
             <AboutUsSection />
-            <ScheduleSection />
+            <CaveDecorationWrapper>
+                <WhatToExpectSection />
+                <ScheduleSection />
+            </CaveDecorationWrapper>
             <SponsorsSection />
             {/* Partner Section */}
             <FAQSection />

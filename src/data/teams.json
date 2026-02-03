@@ -2,21 +2,21 @@
     {
         "displayName": "Sokmontrey Sythat",
         "socialLink": "https://sokmontrey.me",
-        "position": "Co-President",
-        "mainProfilePicturePath": "/team-profiles/montrey.jpeg",
-        "secondaryProfilePicturePath": "/team-profiles/montrey-alt.JPG"
+        "position": "President",
+        "mainProfilePicturePath": "/team-profiles/sokmontrey-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/sokmontrey-alt.jpg"
     },
     {
         "displayName": "Karina Vetlugina",
         "socialLink": "",
-        "position": "Co-President",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "position": "Co-VP",
+        "mainProfilePicturePath": "/team-profiles/karina-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/karina-alt.jpg"
     },
     {
         "displayName": "Hanif Patel",
         "socialLink": "",
-        "position": "Co-President",
+        "position": "Co-VP",
         "mainProfilePicturePath": "",
         "secondaryProfilePicturePath": ""
     },
@@ -24,8 +24,8 @@
         "displayName": "Sakshat Garg",
         "socialLink": "",
         "position": "Logistic Lead & Developer",
-        "mainProfilePicturePath": "/team-profiles/sakshat.jpeg",
-        "secondaryProfilePicturePath": "/team-profiles/sakshat-alt.jpeg"
+        "mainProfilePicturePath": "/team-profiles/sakshat-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/sakshat-alt.jpg"
     },
     {
         "displayName": "Mudit",
@@ -45,15 +45,15 @@
         "displayName": "Mansi",
         "socialLink": "",
         "position": "Design Lead",
-        "mainProfilePicturePath": "/team-profiles/mansi.jpeg",
-        "secondaryProfilePicturePath": "/team-profiles/mansi-alt.jpeg"
+        "mainProfilePicturePath": "/team-profiles/mansi-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/mansi-alt.jpg"
     },
     {
         "displayName": "Evelyn Luu",
         "socialLink": "",
         "position": "Design",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/evelyn-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/evelyn-alt.jpg"
     },
     {
         "displayName": "Hans Casilio",
@@ -66,11 +66,11 @@
         "displayName": "Rizmari Arrogante",
         "socialLink": "https://www.linkedin.com/in/rizmari-arrogante",
         "position": "Design",
-        "mainProfilePicturePath": "/team-profiles/rizmari.jpeg",
-        "secondaryProfilePicturePath": "/team-profiles/rizmari-alt.jpeg"
+        "mainProfilePicturePath": "/team-profiles/riz-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/riz-alt.jpeg"
     },
     {
-        "displayName": "Kai",
+        "displayName": "M'Kai McLachlan",
         "socialLink": "",
         "position": "Design",
         "mainProfilePicturePath": "",
@@ -80,22 +80,22 @@
         "displayName": "Horasha Smith",
         "socialLink": "https://www.instagram.com/94thintellect",
         "position": "Design",
-        "mainProfilePicturePath": "/team-profiles/horasha.jpeg",
-        "secondaryProfilePicturePath": "/team-profiles/horasha-alt.jpeg"
+        "mainProfilePicturePath": "/team-profiles/horasha-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/horasha-alt.jpg"
     },
     {
         "displayName": "Gaya Khiani",
         "socialLink": "",
         "position": "Marketing Lead",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/gaya-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/gaya-alt.jpg"
     },
     {
         "displayName": "Jonathan Cao",
         "socialLink": "",
         "position": "Marketing",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/jonathan-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/jonathan-alt.jpg"
     },
     {
         "displayName": "Kenan Odongo",
@@ -115,8 +115,8 @@
         "displayName": "Kiana Sepasian",
         "socialLink": "",
         "position": "Outreach Lead",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/kiana-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/kiana-alt.jpg"
     },
     {
         "displayName": "Leonard Eriyo",
@@ -129,35 +129,35 @@
         "displayName": "Awsaf Fida Mahmud",
         "socialLink": "https://www.afmahmud.dev",
         "position": "Lead Developer - Frontend",
-        "mainProfilePicturePath": "/team-profiles/awsaf.jpg",
+        "mainProfilePicturePath": "/team-profiles/awsaf-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/awsaf-alt.jpg"
     },
     {
         "displayName": "Alfred Ranz Navarro",
         "socialLink": "",
         "position": "Developer - Frontend",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/alfred-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/alfred-alt.jpg"
     },
     {
         "displayName": "Christian",
         "socialLink": "",
         "position": "Developer - Frontend",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/christian-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/christian-alt.jpg"
     },
     {
         "displayName": "Samuel Browne",
         "socialLink": "",
         "position": "Lead Developer - Backend",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/sam-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/sam-alt.jpg"
     },
     {
         "displayName": "Caio Cotts",
         "socialLink": "https://caiocotts.com/",
         "position": "Developer - Backend",
-        "mainProfilePicturePath": "/team-profiles/caio.jpg",
+        "mainProfilePicturePath": "/team-profiles/caio-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/caio-alt.jpg"
     },
     {
@@ -171,25 +171,32 @@
         "displayName": "O'Neal Jean",
         "socialLink": "",
         "position": "Developer - Backend",
-        "mainProfilePicturePath": "",
-        "secondaryProfilePicturePath": ""
+        "mainProfilePicturePath": "/team-profiles/oneal-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/oneal-alt.jpg"
     },
     {
         "displayName": "Max Tran",
+        "socialLink": "",
+        "position": "Developer - Fullstack",
+        "mainProfilePicturePath": "/team-profiles/max-main.jpg",
+        "secondaryProfilePicturePath": "/team-profiles/max-alt.jpg"
+    },
+    {
+        "displayName": "Nirja Arun Dahbi",
         "socialLink": "",
         "position": "Developer - Fullstack",
         "mainProfilePicturePath": "",
         "secondaryProfilePicturePath": ""
     },
     {
-        "displayName": "Nirja Arun Dahbi",
+        "displayName": "Andrew Rudder",
         "socialLink": "",
-        "position": "Developer - Backend",
+        "position": "Advisor",
         "mainProfilePicturePath": "",
         "secondaryProfilePicturePath": ""
     },
     {
-        "displayName": "Andrew Rudder",
+        "displayName": "Tyler O'Neil",
         "socialLink": "",
         "position": "Advisor",
         "mainProfilePicturePath": "",
