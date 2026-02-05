@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         locale: 'en_US',
         images: [
             {
-                url: '/husky-use-computer.png', // Must be in your public folder
+                url: '/huskyhacklogo.svg', // Must be in your public folder
                 width: 763,
                 height: 554,
                 alt: 'HuskyHack 2026 Preview',
