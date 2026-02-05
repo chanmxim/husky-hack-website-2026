@@ -8,7 +8,7 @@
     },
     {
         "displayName": "Karina Vetlugina",
-        "socialLink": "",
+        "socialLink": "https://www.linkedin.com/in/karina-vetlugina/",
         "position": "Co-VP",
         "mainProfilePicturePath": "/team-profiles/karina-main.jpg",
         "secondaryProfilePicturePath": ""
@@ -50,7 +50,7 @@
     },
     {
         "displayName": "Evelyn Luu",
-        "socialLink": "",
+        "socialLink": "https://www.linkedin.com/in/evelyn-luu/",
         "position": "Design",
         "mainProfilePicturePath": "/team-profiles/evelyn-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/evelyn-alt.jpg"
@@ -85,14 +85,14 @@
     },
     {
         "displayName": "Gaya Khiani",
-        "socialLink": "",
+        "socialLink": "https://gayakhiani.framer.website/",
         "position": "Marketing Lead",
         "mainProfilePicturePath": "/team-profiles/gaya-main.jpg",
         "secondaryProfilePicturePath": ""
     },
     {
         "displayName": "Jonathan Cao",
-        "socialLink": "",
+        "socialLink": "https://www.linkedin.com/in/jc-jonathan-cao/",
         "position": "Marketing",
         "mainProfilePicturePath": "/team-profiles/jonathan-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/jonathan-alt.jpg"
@@ -113,7 +113,7 @@
     },
     {
         "displayName": "Kiana Sepasian",
-        "socialLink": "",
+        "socialLink": "www.linkedin.com/in/kiana-sepasian",
         "position": "Outreach Co-Lead",
         "mainProfilePicturePath": "/team-profiles/kiana-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/kiana-alt.jpg"
@@ -140,8 +140,8 @@
         "secondaryProfilePicturePath": ""
     },
     {
-        "displayName": "Christian",
-        "socialLink": "",
+        "displayName": "Christian Garcia Flores",
+        "socialLink": "www.linkedin.com/in/christian-garcia-flores-54a020267",
         "position": "Web Developer",
         "mainProfilePicturePath": "/team-profiles/christian-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/christian-alt.jpg"
@@ -176,7 +176,7 @@
     },
     {
         "displayName": "Max Tran",
-        "socialLink": "",
+        "socialLink": "https://www.linkedin.com/in/quang-thanh-tran-671030291",
         "position": "Web Developer",
         "mainProfilePicturePath": "/team-profiles/max-main.jpg",
         "secondaryProfilePicturePath": "/team-profiles/max-alt.jpg"
