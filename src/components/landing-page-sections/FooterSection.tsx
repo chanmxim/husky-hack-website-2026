@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { useEffect, useRef, useState } from "react";
 import socialLinks from "../../data/socialLinks.json";
 import {
     DiscordIcon,
@@ -10,48 +9,25 @@ import {
 } from "@hugeicons/core-free-icons";
 
 export default function FooterSection() {
-    const textRef = useRef<SVGTextElement>(null);
-    const [viewBox, setViewBox] = useState("0 0 100 20");
-
-    useEffect(() => {
-        const updateViewBox = () => {
-            if (textRef.current) {
-                const bbox = textRef.current.getBBox();
-                setViewBox(`${bbox.x} ${bbox.y} ${bbox.width} ${bbox.height}`);
-            }
-        };
-
-        updateViewBox();
-        document.fonts.ready.then(updateViewBox);
-        globalThis.addEventListener("resize", updateViewBox);
-        return () => globalThis.removeEventListener("resize", updateViewBox);
-    }, []);
-
     return (
         <footer id="Footer" className="pt-10 bg-[#1E2024] flex flex-col">
-            <div className="bg-[#FF7703] rounded-2xl px-16 py-16 h-full">
-                <div className="flex flex-col md:flex-row space-between md:items-start items-center ">
-                    <div className="flex flex-col items-start h-full w-full md:w-[50%]">
-                        {/* Left side of footer */}
+            <div className="bg-[#FF7703] rounded-2xl mx-4 mb-4 px-6 py-10 md:px-16 md:py-16 flex flex-col lg:flex-row gap-10 lg:gap-20 min-h-[500px]">
+                {/* LEFT COLUMN: Branding & Logo */}
+                <div className="flex flex-col items-start justify-between w-full lg:w-5/12 h-full">
+                    <div>
+                        <p className="text-gray-900 font-rethink-sans text-3xl md:text-4xl font-medium leading-tight">
+                            Made with love by the
+                            <br />
+                            <span className="font-bold">HuskyHack</span> team
+                        </p>
+                        <p className="text-gray-900 font-rethink-sans mt-3 font-medium">
+                            © {new Date().getFullYear()} HuskyHack
+                        </p>
 
-                        <div>
-                            <p className="text-gray-900 font-rethink-sans text-4xl font-medium">
-                                Made with love by the
-                                <br />
-                                <span className="font-bold">
-                                    HuskyHack
-                                </span>{" "}
-                                team
-                            </p>
-                            <p className="text-gray-900 font-rethink-sans">
-                                © {new Date().getFullYear()} HuskyHack
-                            </p>
-                        </div>
-                        <div className="flex flex-row gap-4 mt-5">
+                        <div className="flex flex-row gap-4 mt-6">
                             <a
                                 href="/construction"
-                                rel="noopener noreferrer"
-                                className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
+                                className="text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon icon={DiscordIcon} size={24} />
                             </a>
@@ -59,7 +35,7 @@ export default function FooterSection() {
                                 href={socialLinks.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
+                                className="text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon
                                     icon={Linkedin01Icon}
@@ -70,98 +46,100 @@ export default function FooterSection() {
                                 href={socialLinks.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
+                                className="text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon icon={InstagramIcon} size={24} />
                             </a>
                         </div>
-                        <div className="mt-5 w-48 md:w-48">
-                            <Image
-                                src="/huskyhacklogo.svg"
-                                alt="HuskyHack Logo"
-                                width={1}
-                                height={1}
-                                className="w-full h-auto"
-                            />
+                    </div>
+
+                    <div className="mt-8 w-40 md:w-48">
+                        <Image
+                            src="/huskyhacklogo.svg"
+                            alt="HuskyHack Logo"
+                            width={200}
+                            height={50}
+                            className="w-full h-auto"
+                        />
+                    </div>
+                </div>
+
+                {/* RIGHT COLUMN: Links & Big Text */}
+                <div className="flex flex-col justify-between w-full lg:w-7/12 h-full">
+                    {/* Top: Links Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
+                        <div className="flex flex-col gap-3">
+                            <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-gray-900 mb-1">
+                                Info
+                            </h3>
+                            <a
+                                href="#About-Us"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                About Us
+                            </a>
+                            <a
+                                href="#Sponsors"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                Sponsors
+                            </a>
+                            <a
+                                href="#FAQ"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                FAQ
+                            </a>
+                            <a
+                                href="#Team"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                Our Team
+                            </a>
+                        </div>
+
+                        <div className="flex flex-col gap-3">
+                            <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-gray-900 mb-1">
+                                Contact
+                            </h3>
+                            <a
+                                href="/contact?query=support"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                Support
+                            </a>
+                            <a
+                                href="/contact?query=sponsorship"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                Sponsorship
+                            </a>
+                        </div>
+
+                        <div className="flex flex-col gap-3">
+                            <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-gray-900 mb-1">
+                                Resources
+                            </h3>
+                            <a
+                                href="/construction"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                Code of Conduct
+                            </a>
+                            <a
+                                href="/construction"
+                                className="text-gray-900 hover:text-white transition-colors"
+                            >
+                                Privacy Policy
+                            </a>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-5 md:gap-10 lg:gap-15 flex-grow w-full md:w-[50%]">
-                        {" "}
-                        {/* Right side of footer */}
-                        <div className="flex flex-row gap-5 md:gap-10 lg:gap-15 justify-between md:justify-center flex-grow">
-                            <div className="flex flex-col items-start ">
-                                <h3 className="text-2xl md:text-3xl font-rethink-sans mt-4 mb-1 md:mt-0 font-bold text-gray-900">
-                                    Info
-                                </h3>
-                                <a
-                                    href="#About-Us"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    About Us
-                                </a>
-                                <a
-                                    href="#Sponsors"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    Sponsors
-                                </a>
-                                <a
-                                    href="#FAQ"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    FAQ
-                                </a>
-                                <a
-                                    href="#Team"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    Our Team
-                                </a>
-                            </div>
-                            <div className="flex flex-col items-start">
-                                <h3 className="text-2xl md:text-3xl font-rethink-sans mt-4 mb-1 md:mt-0 font-bold text-gray-900">
-                                    Contact
-                                </h3>
-                                <a
-                                    href="/contact?query=support"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    Support
-                                </a>
-                                <a
-                                    href="/contact?query=sponsorship"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    Sponsorship & Partnerships
-                                </a>
-                            </div>
-                            <div className="flex flex-col items-start">
-                                <h3 className="text-2xl md:text-3xl font-rethink-sans mt-4 mb-1 md:mt-0 font-bold text-gray-900">
-                                    Resources
-                                </h3>
-                                <a
-                                    href="/construction"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    Code of Conduct
-                                </a>
-                                <a
-                                    href="/construction"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-900 hover:text-blue-600 transition-colors duration-300"
-                                >
-                                    Privacy Policy
-                                </a>
-                            </div>
-                        </div>
-                        <div className="w-full mt-10 leading-none">
-                            <p className="font-rethink-sans text-[#1E2024] font-medium tracking-[-0.05em] text-center text-[15vw] md:text-[9vw]">
-                                HuskyHack
-                            </p>
-                        </div>
+
+                    {/* Bottom: Big Text  */}
+                    <div className="w-full pt-12 lg:mt-auto">
+                        <p className="font-rethink-sans text-[#1E2024] font-medium tracking-[-0.05em] text-center lg:text-left lg:-translate-x-3 text-[15vw] lg:text-[9vw] leading-none select-none">
+                            HuskyHack
+                        </p>
                     </div>
                 </div>
             </div>

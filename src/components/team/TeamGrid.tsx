@@ -33,9 +33,23 @@ export default function TeamGrid({
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center">
                         {group.members
-                            .sort((a, b) =>
-                                a.displayName.localeCompare(b.displayName),
-                            )
+                            .sort((a, b) => {
+                                const getRank = (position: string) => {
+                                    const pos = position.toLowerCase();
+                                    if (pos.includes("co-lead")) return 0;
+                                    if (pos.includes("lead")) return 1;
+                                    return 2;
+                                };
+
+                                const rankA = getRank(a.position);
+                                const rankB = getRank(b.position);
+
+                                if (rankA !== rankB) return rankA - rankB;
+
+                                return a.displayName.localeCompare(
+                                    b.displayName,
+                                );
+                            })
                             .map((teamMember, index) => (
                                 <div
                                     key={`${teamMember.displayName}-${index}`}
@@ -55,7 +69,11 @@ export default function TeamGrid({
                                                 ? "noopener noreferrer"
                                                 : ""
                                         }
-                                        className={`flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 ${!teamMember.socialLink ? "cursor-default" : ""}`}
+                                        className={`flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 ${
+                                            !teamMember.socialLink
+                                                ? "cursor-default"
+                                                : ""
+                                        }`}
                                     >
                                         <div className="relative mb-3">
                                             <TeamMemberPhoto

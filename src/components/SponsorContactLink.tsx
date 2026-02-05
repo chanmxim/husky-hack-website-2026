@@ -5,10 +5,10 @@ export default function SponsorContactLink() {
             <span className="text-center">
                 <span> </span>
                 <a
-                    href="mailto:huskyhack.sponsor@gmail.com"
+                    href="mailto:outreact.huskyhack@gmail.com"
                     className="underline text-amber-300"
                 >
-                    huskyhack.sponsor@gmail.com!
+                    outreach.huskyhack@gmail.com!
                 </a>
             </span>
         </p>
