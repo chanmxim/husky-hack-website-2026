@@ -1,5 +1,5 @@
 import faqs from "../../data/faqs.json";
-import Accordion from "../faq/Accordian";
+import FAQAccordion from "../faq/Accordian";
 import huskyPeekComputer from "../../assets/husky-peek-computer.png";
 import Image from "next/image";
 
@@ -13,9 +13,8 @@ export default function FAQSection() {
                 <div className="flex flex-col gap-4 w-[50vw] items-start">
                     {faqs.map((faq, index) => (
 
-                        <div className="bg-[#5E4527] rounded-lg w-[50vw] text-black" key={index}>
-
-                            <Accordion
+                        <div className="bg-[#5E4527] rounded-lg w-[50vw]" key={index}>
+                            <FAQAccordion
                                 question={faq.question}
                                 answer={faq.answer} />
                         </div>
