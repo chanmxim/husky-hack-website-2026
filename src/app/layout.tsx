@@ -39,11 +39,12 @@ export const metadata: Metadata = {
         images: [
             {
                 url: '/huskyhacklogo.png', // Must be in your public folder
-                width: 763,
-                height: 554,
+                width: 1200,
+                height: 1200,
                 alt: 'HuskyHack 2026 Preview',
             },
         ],
+        themeColor: '#eaa022ff',
     },
 };
 
