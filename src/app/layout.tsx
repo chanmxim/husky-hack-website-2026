@@ -44,7 +44,6 @@ export const metadata: Metadata = {
                 alt: 'HuskyHack 2026 Preview',
             },
         ],
-        themeColor: '#eaa022ff',
     },
 };
 
