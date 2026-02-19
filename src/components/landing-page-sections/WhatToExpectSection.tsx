@@ -12,12 +12,24 @@ interface FeatureCardProps {
     imageClassName?: string;
 }
 
-const FeatureCard = ({ image, title, description, className = "", imageClassName = "" }: FeatureCardProps) => (
-    <div className={`flex flex-col items-center flex-1 text-center w-fit ${className}`}>
-        <div className={`w-full flex items-center justify-center`}>
+const FeatureCard = ({
+    image,
+    title,
+    description,
+    className = "",
+    imageClassName = "",
+}: FeatureCardProps) => (
+    <div
+        className={`flex flex-col items-center flex-1 text-center w-fit ${className}`}
+    >
+        <div
+            className={`w-full flex items-center justify-center hover:animate-wiggle`}
+        >
             <Image src={image} alt={title} className={imageClassName} />
         </div>
-        <h3 className="text-xl md:text-2xl font-bold text-[#fbbf24] mb-2 font-rethink-sans">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-bold text-[#fbbf24] mb-2 font-rethink-sans">
+            {title}
+        </h3>
         <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument-sans">
             {description}
         </p>
@@ -33,9 +45,15 @@ interface RoleCardProps {
     buttonLink?: string;
 }
 
-const RoleCard = ({ image = "/huskyhacklogo.svg", title, description, buttonText, disabled = false, buttonLink }: RoleCardProps) => (
+const RoleCard = ({
+    image = "/huskyhacklogo.svg",
+    title,
+    description,
+    buttonText,
+    disabled = false,
+    buttonLink,
+}: RoleCardProps) => (
     <div className="relative bg-[#1e293b] rounded-3xl p-8 pt-20 flex flex-col items-center text-center flex-1 shadow-lg hover:scale-105 transition-transform duration-300 max-w-[fit-content] mt-16">
-
         {/* Image Container: Absolute positioned to stick out the top */}
         <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-orange-100 border-4 border-[#92400e] overflow-hidden flex items-center justify-center shadow-md">
             <Image
@@ -56,15 +74,28 @@ const RoleCard = ({ image = "/huskyhacklogo.svg", title, description, buttonText
             {description}
         </p>
 
-        <button disabled={disabled} className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full max-w-[200px] font-rethink-sans">
-            {buttonLink ? (
-                <Link href={buttonLink} target="_blank" rel="noopener noreferrer">
+        {buttonLink ? (
+            <Link
+                href={buttonLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-[200px]"
+            >
+                <button
+                    disabled={disabled}
+                    className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full font-rethink-sans"
+                >
                     {buttonText}
-                </Link>
-            ) : (
-                buttonText
-            )}
-        </button>
+                </button>
+            </Link>
+        ) : (
+            <button
+                disabled={disabled}
+                className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full max-w-[200px] font-rethink-sans"
+            >
+                {buttonText}
+            </button>
+        )}
     </div>
 );
 
@@ -72,9 +103,17 @@ const WhatToExpectSection = () => {
     return (
         <div>
             <div>
-                <Image src="/expectations/top_curve.svg" alt="a curve design" className="w-full h-auto absolute z-10 top-0" width={1} height={1} />
+                <Image
+                    src="/expectations/top_curve.svg"
+                    alt="a curve design"
+                    className="w-full h-auto absolute z-10 top-0"
+                    width={1}
+                    height={1}
+                />
             </div>
-            <h1 className="relative z-10 text-3xl md:text-4xl font-bold text-center mt-8 md:mt-12 font-rethink-sans">What to Expect</h1>
+            <h1 className="relative z-10 text-3xl md:text-4xl font-bold text-center mt-8 md:mt-12 font-rethink-sans">
+                What to Expect
+            </h1>
 
             <div className="flex flex-col justify-evenly gap-32 md:gap-24 mt-24 md:mt-12">
                 {/* Features */}
@@ -82,34 +121,37 @@ const WhatToExpectSection = () => {
                     <FeatureCard
                         image={packResults}
                         title="Networking"
-                        description="Build bonds that go beyond the weekend. Connect with a community that supports your journey long after camp closes."
+                        description="Build bonds that go beyond the weekend. Connect with a community of makers that supports your journey long after camp closes."
                         className="w-full md:w-auto px-4"
                     />
 
                     <FeatureCard
                         image={trailHonour}
                         title="Prizes"
-                        description="We have stickers, swags, and $1,000 in cash top prizes"
+                        description="We have stickers, swags, and prizes for all who embrace the adventure."
                         className="mt-0 md:mt-16 md:translate-y-24 w-full md:w-auto px-4"
                     />
 
                     <FeatureCard
                         image={scoutMentor}
                         title="Mentorship"
-                        description="Learn from industry professional with experience in startup and entrepreneurship"
+                        description="Learn from makers, designers, engineers, and experienced professionals with industry and startup experience."
                         className="w-full md:w-auto px-4"
                     />
                 </div>
 
                 <div className="flex flex-col items-center gap-4 mt-24 md:mt-32">
-                    <h3 className="text-xl md:text-2xl font-bold text-center mb-8 md:z-10 font-rethink-sans">And more along the journey...</h3>
-                    <h2 className="text-3xl md:text-5xl font-bold text-center mt-12 md:z-10 font-rethink-sans">How to Participate</h2>
+                    <h3 className="text-xl md:text-2xl font-bold text-center mb-8 md:z-10 font-rethink-sans">
+                        And more along the journey...
+                    </h3>
+                    <h2 className="text-3xl md:text-5xl font-bold text-center mt-12 md:z-10 font-rethink-sans">
+                        How to Participate
+                    </h2>
                 </div>
 
                 {/* Section 2: Hacker, Mentor, Sponsor Cards */}
                 <div className="relative z-10 flex flex-col lg:flex-row justify-center gap-8 w-full max-w-6xl mx-auto px-4 items-center">
                     <RoleCard
-
                         title="Hacker"
                         description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
                         buttonText="Apply"
@@ -117,7 +159,6 @@ const WhatToExpectSection = () => {
                     />
 
                     <RoleCard
-
                         title="Mentor"
                         description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead campers toward their 'aha' moments."
                         buttonText="Apply"
@@ -125,7 +166,6 @@ const WhatToExpectSection = () => {
                     />
 
                     <RoleCard
-
                         title="Sponsor"
                         description="Fuel the adventure. Equip our campers with resources, showcase your brand, and scout for the next generation of tech talent."
                         buttonText="Apply"

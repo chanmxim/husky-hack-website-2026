@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { VT323, Chivo_Mono, Rethink_Sans, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import RecaptchaProvider from "../providers/RecaptchaProvider";
@@ -58,6 +59,7 @@ export default function RootLayout({
                     {children}
                 </RecaptchaProvider>
             </body>
+            <GoogleAnalytics gaId="G-7HL5234QKL" />
         </html>
     );
 }
