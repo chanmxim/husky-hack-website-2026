@@ -19,7 +19,7 @@ export default function HeroSection() {
 
     const arrowOpacity = Math.max(0, 0.5 - scrollY / 300);
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-20 md:pt-32 text-white">
+        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-32 text-white">
             <div className="z-20 text-center px-4 flex flex-col items-center">
                 <h1 className="text-6xl md:text-8xl font-bold">
                     <span className="text-amber-200">HuskyHack</span>
@@ -46,7 +46,7 @@ export default function HeroSection() {
             </div>
 
             {/* Svg Background layer */}
-            <div className="absolute bottom-0 w-full h-full z-10">
+            <div className="absolute inset-0 z-10 -top-12 md:top-0">
                 <Image
                     src="/hero-svg/backgroundLayer.svg"
                     alt="Camping landscape"
