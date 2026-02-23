@@ -30,7 +30,7 @@ export default function HeroSection() {
                 </p>
 
                 <p className="text-base text-gray-300 pt-1">
-                    May 2026 • <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
+                    May 2026 <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
                 </p>
 
                 <div className="mt-7">
