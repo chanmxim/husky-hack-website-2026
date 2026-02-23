@@ -13,6 +13,7 @@ interface TeamMember {
 interface TeamGroup {
     title: string;
     members: TeamMember[];
+    color?: string;
 }
 
 export default function TeamGrid({
@@ -23,7 +24,7 @@ export default function TeamGrid({
     onShowLess?: () => void;
 }) {
     return (
-        <div className="space-y-16 animate-fade-in">
+        <div className="space-y-24 animate-fade-in">
             {onShowLess && (
                 <div className="flex justify-center mt-10 ">
                     <a
@@ -40,7 +41,7 @@ export default function TeamGrid({
                         {group.title}
                     </h3>
 
-                    <div className="flex flex-wrap justify-center gap-8 max-w-[90%]">
+                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-[90%]">
                         {group.members
                             .sort((a, b) => {
                                 const getRank = (position: string) => {
@@ -79,12 +80,12 @@ export default function TeamGrid({
                                                 : ""
                                         }
                                         className={`flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 ${
-                                            !teamMember.socialLink
-                                                ? "cursor-default"
-                                                : ""
+                                            teamMember.socialLink
+                                                ? "cursor-pointer"
+                                                : "cursor-default"
                                         }`}
                                     >
-                                        <div className="relative mb-3">
+                                        <div className="relative">
                                             <TeamMemberPhoto
                                                 mainProfilePicturePath={
                                                     teamMember.mainProfilePicturePath
@@ -92,17 +93,25 @@ export default function TeamGrid({
                                                 secondaryProfilePicturePath={
                                                     teamMember.secondaryProfilePicturePath
                                                 }
-                                                className="w-24 h-24 sm:w-28 sm:h-28 rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
+                                                className="w-28 h-28 sm:w-32 sm:h-32 rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
                                             />
+                                            {teamMember.position && (
+                                                <span
+                                                    className={`absolute bottom-1 -right-1 text-[10px] text-white px-3 py-0.5 -rotate-12 font-medium z-10 rounded-sm ${
+                                                        (group.title === "Executive" || teamMember.position.toLowerCase().includes("lead"))
+                                                            ? "bg-[#F97316]"
+                                                            : "bg-gray-500"
+                                                    }`}
+                                                >
+                                                    {teamMember.position}
+                                                </span>
+                                            )}
                                         </div>
 
-                                        <div className="text-center">
-                                            <h4 className="font-bold text-sm sm:text-base text-white leading-tight mb-1 font-rethink">
+                                        <div className="text-center w-full mt-2">
+                                            <h4 className="font-bold text-sm sm:text-base text-white leading-tight font-rethink truncate">
                                                 {teamMember.displayName}
                                             </h4>
-                                            <p className="text-xs sm:text-sm text-gray-300 font-medium px-2 font-instrument">
-                                                {teamMember.position}
-                                            </p>
                                         </div>
                                     </a>
                                 </div>

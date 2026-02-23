@@ -44,16 +44,18 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
                         href={member.socialLink || undefined}
                         target={member.socialLink ? "_blank" : "_self"}
                         rel={member.socialLink ? "noopener noreferrer" : ""}
-                        className={`relative flex flex-col items-center ${!member.socialLink ? "cursor-default" : ""}`}
+                        className={`relative flex flex-col items-center ${member.socialLink ? "cursor-pointer" : "cursor-default"}`}
                     >
                         <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                             <div className="bg-[#1C6D41] text-white text-xs font-bold py-1 px-3 rounded shadow-lg whitespace-nowrap relative">
-                                <div className="text-center">
+                                <div className="text-center mb-1">
                                     {member.displayName}
                                 </div>
-                                <div className="text-center font-medium">
-                                    {member.position}
-                                </div>
+                                {member.position && (
+                                    <div className="text-center font-medium text-[10px]">
+                                        {member.position}
+                                    </div>
+                                )}
                                 <div className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-[#1C6D41]"></div>
                             </div>
                         </div>
