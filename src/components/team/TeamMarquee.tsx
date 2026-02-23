@@ -3,6 +3,7 @@ import TeamMemberPhoto from "./TeamMemberPhoto";
 interface Team {
     title: string;
     members: TeamMember[];
+    color?: string;
 }
 
 interface TeamMember {
@@ -18,12 +19,19 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
     const loopedTeams = [...teams, ...teams];
 
     // Team title before each group of members
-    const createTeamTitle = (title: string, index: number) => (
+    const createTeamTitle = (title: string, color: string | undefined, index: number) => (
         <div
             key={"title-" + index}
             className="h-16 md:h-20 flex flex-col justify-center px-5"
         >
-            <h2 className="text-2xl font-rethink-sans font-bold text-white">
+            <h2
+                className="text-2xl font-rethink-sans font-bold truncate bg-clip-text text-transparent"
+                style={{
+                    backgroundImage: color
+                        ? `linear-gradient(to right, ${color}, ${color}CC)`
+                        : "linear-gradient(to right, #fff, #fff)",
+                }}
+            >
                 {title}
             </h2>
         </div>
@@ -72,7 +80,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
         <div className="flex flex-row items-center w-full py-10 overflow-x-hidden">
             <div className="flex animate-scroll hover:[animation-play-state:paused] w-max">
                 {loopedTeams.flatMap((team, index) => [
-                    createTeamTitle(team.title, index),
+                    createTeamTitle(team.title, team.color, index),
                     ...createMemberList(team.members, index),
                 ])}
             </div>

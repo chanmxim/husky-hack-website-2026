@@ -1,34 +1,42 @@
 [
     {
         "title": "Executive",
-        "keywords": ["President", "Co-VP"]
+        "keywords": ["President", "Co-VP"],
+        "color": "#FED571"
     },
     {
         "title": "Logistics",
-        "keywords": ["Logistic"]
+        "keywords": ["Logistic"],
+        "color": "#3B82F6"
     },
     {
         "title": "Finance",
-        "keywords": ["Finance"]
+        "keywords": ["Finance"],
+        "color": "#10B981"
     },
     {
         "title": "Outreach",
-        "keywords": ["Outreach"]
+        "keywords": ["Outreach"],
+        "color": "#F97316"
     },
     {
-        "title": "Marketing",
-        "keywords": ["Marketing"]
+        "title": "Marketing & Social Media",
+        "keywords": ["Marketing"],
+        "color": "#EC4899"
     },
     {
         "title": "Design",
-        "keywords": ["Design"]
+        "keywords": ["Design"],
+        "color": "#8B5CF6"
     },
     {
         "title": "Software Development",
-        "keywords": ["Web Developer"]
+        "keywords": ["Web Developer"],
+        "color": "#06B6D4"
     },
     {
         "title": "Advisors",
-        "keywords": ["Advisor"]
+        "keywords": ["Advisor"],
+        "color": "#F59E0B"
     }
 ]

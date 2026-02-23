@@ -12,6 +12,7 @@ export default function TeamSection() {
     const groupedTeams = teamCategories
         .map((category) => ({
             title: category.title,
+            color: category.color,
             members: teams.filter((member) =>
                 category.keywords.some((keyword) =>
                     member.position.includes(keyword),
@@ -28,6 +29,7 @@ export default function TeamSection() {
     if (uncategorized.length > 0) {
         groupedTeams.push({
             title: "Team Members",
+            color: "#9CA3AF",
             members: uncategorized,
         });
     }
