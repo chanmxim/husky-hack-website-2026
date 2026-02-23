@@ -17,21 +17,30 @@ interface TeamGroup {
 
 export default function TeamGrid({
     groupedMembers,
+    onShowLess,
 }: {
     groupedMembers: TeamGroup[];
+    onShowLess?: () => void;
 }) {
     return (
         <div className="space-y-16 animate-fade-in">
+            {onShowLess && (
+                <div className="flex justify-center mt-10 ">
+                    <a
+                        onClick={onShowLess}
+                        className="text-white underline text-sm cursor-pointer hover:text-gray-300 transition-colors"
+                    >
+                        Show Less
+                    </a>
+                </div>
+            )}
             {groupedMembers.map((group) => (
-                <div key={group.title} className="w-full">
-                    <h3 className="text-2xl font-bold font-rethink text-center mb-8 text-white relative inline-block w-full">
-                        <span className="relative z-10 bg-[#1C6D41] px-4">
-                            {group.title}
-                        </span>
-                        <div className="absolute top-1/2 left-0 w-full h-px bg-gray-500 z-0 transform -translate-y-1/2"></div>
+                <div key={group.title} className="w-full flex flex-col items-center">
+                    <h3 className="text-2xl font-light font-rethink-sans text-white mb-8">
+                        {group.title}
                     </h3>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center">
+                    <div className="flex flex-wrap justify-center gap-8 max-w-[90%]">
                         {group.members
                             .sort((a, b) => {
                                 const getRank = (position: string) => {
@@ -53,7 +62,7 @@ export default function TeamGrid({
                             .map((teamMember, index) => (
                                 <div
                                     key={`${teamMember.displayName}-${index}`}
-                                    className="group flex flex-col items-center w-full max-w-[160px]"
+                                    className="group flex flex-col items-center w-[140px] sm:w-[160px] flex-shrink-0"
                                 >
                                     <a
                                         href={
@@ -83,7 +92,7 @@ export default function TeamGrid({
                                                 secondaryProfilePicturePath={
                                                     teamMember.secondaryProfilePicturePath
                                                 }
-                                                className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
+                                                className="w-24 h-24 sm:w-28 sm:h-28 rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
                                             />
                                         </div>
 

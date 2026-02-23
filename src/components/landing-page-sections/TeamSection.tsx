@@ -46,7 +46,7 @@ export default function TeamSection() {
             {!showAll ? (
                 <TeamMarquee teams={groupedTeams} />
             ) : (
-                <TeamGrid groupedMembers={groupedTeams} />
+                <TeamGrid groupedMembers={groupedTeams} onShowLess={() => setShowAll(false)} />
             )}
 
             <div className="flex justify-center mt-4">
