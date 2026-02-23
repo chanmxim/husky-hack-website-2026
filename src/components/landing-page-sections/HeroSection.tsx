@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-center text-white">
-            <div className="z-20 text-center px-4 flex flex-col items-center justify-center mt-10 md:mt-0">
+        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-20 md:pt-32 text-white">
+            <div className="z-20 text-center px-4 flex flex-col items-center">
                 <h1 className="text-6xl md:text-8xl font-bold">
                     <span className="text-amber-200">HuskyHack</span>
                 </h1>
@@ -23,6 +23,11 @@ export default function HeroSection() {
 
                 <div className="mt-7">
                     <NewsletterForm />
+                </div>
+
+                <div className="mt-7 flex flex-col items-center">
+                    <SponsorContactLink />
+                    <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce opacity-50"/>
                 </div>
 
 
@@ -55,10 +60,6 @@ export default function HeroSection() {
                 <Firefly top="60%" left="60%" widthRange={40} heightRange={40} />
                 <Firefly top="85%" left="30%" size="3px" widthRange={20} heightRange={20} />
                 <Firefly top="90%" left="65%" size="5px" widthRange={50} heightRange={50} minDurationX={5} maxDurationX={10} />
-            </div>
-            <div className="mt-7 absolute bottom-20 z-10 flex flex-col items-center">
-                <SponsorContactLink />
-                <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce opacity-50"/>
             </div>
 
         </section>
