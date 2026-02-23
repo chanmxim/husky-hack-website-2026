@@ -35,7 +35,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
             .map((member) => (
                 <div
                     key={`${member.displayName}-${index}`}
-                    className="group relative flex flex-col items-center justify-center w-[100px] h-fit"
+                    className="group relative flex flex-col items-center justify-center w-[100px] h-20 md:h-24"
                 >
                     <a
                         href={member.socialLink || undefined}
