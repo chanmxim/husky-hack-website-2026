@@ -25,12 +25,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
             className="h-16 md:h-20 flex flex-col justify-center px-5"
         >
             <h2
-                className="text-2xl font-rethink-sans font-bold truncate bg-clip-text text-transparent"
-                style={{
-                    backgroundImage: color
-                        ? `linear-gradient(to right, ${color}, ${color}CC)`
-                        : "linear-gradient(to right, #fff, #fff)",
-                }}
+                className="text-2xl font-rethink-sans font-light text-white truncate"
             >
                 {title}
             </h2>
