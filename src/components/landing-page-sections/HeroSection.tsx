@@ -1,11 +1,23 @@
+"use client";
+
 import Firefly from "../FireFly.tsx";
 import NewsletterForm from "../NewsletterForm";
 import SponsorContactLink from "../SponsorContactLink";
 import { MapPin, ArrowDown } from 'lucide-react';
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
 export default function HeroSection() {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => setScrollY(window.scrollY);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const arrowOpacity = Math.max(0, 0.5 - scrollY / 300);
     return (
         <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-20 md:pt-32 text-white">
             <div className="z-20 text-center px-4 flex flex-col items-center">
@@ -27,7 +39,7 @@ export default function HeroSection() {
 
                 <div className="mt-7 flex flex-col items-center">
                     <SponsorContactLink />
-                    <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce opacity-50"/>
+                    <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce" style={{ opacity: arrowOpacity }}/>
                 </div>
 
 
