@@ -43,7 +43,7 @@ export default function TeamMemberPhoto({
                     <img
                         src="/team-profiles/default-profile.svg"
                         alt="Default Profile"
-                        className="w-16 h-16 object-contain"
+                        className="w-14 h-14 md:w-16 md:h-16 object-contain"
                     />
                 </div>
             )}

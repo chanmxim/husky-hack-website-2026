@@ -63,7 +63,7 @@ export default function TeamGrid({
                             .map((teamMember, index) => (
                                 <div
                                     key={`${teamMember.displayName}-${index}`}
-                                    className="group flex flex-col items-center w-[140px] sm:w-[160px] flex-shrink-0"
+                                    className="group flex flex-col items-center w-[100px] sm:w-[140px] flex-shrink-0"
                                 >
                                     <a
                                         href={
@@ -93,7 +93,7 @@ export default function TeamGrid({
                                                 secondaryProfilePicturePath={
                                                     teamMember.secondaryProfilePicturePath
                                                 }
-                                                className="w-28 h-28 sm:w-32 sm:h-32 rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
+                                                className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-lg sm:rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
                                             />
                                             {teamMember.position && (
                                                 <span
@@ -109,7 +109,7 @@ export default function TeamGrid({
                                         </div>
 
                                         <div className="text-center w-full mt-2">
-                                            <h4 className="font-bold text-sm sm:text-base text-white leading-tight font-rethink truncate">
+                                            <h4 className="font-bold text-xs sm:text-sm md:text-base text-white leading-tight font-rethink truncate">
                                                 {teamMember.displayName}
                                             </h4>
                                         </div>

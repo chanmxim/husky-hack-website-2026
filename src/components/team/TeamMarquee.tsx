@@ -25,7 +25,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
             className="h-16 md:h-20 flex flex-col justify-center px-5"
         >
             <h2
-                className="text-2xl font-rethink-sans font-light text-white truncate"
+                className="text-lg md:text-xl font-rethink-sans font-light text-white truncate"
             >
                 {title}
             </h2>
@@ -67,7 +67,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
                             secondaryProfilePicturePath={
                                 member.secondaryProfilePicturePath
                             }
-                            className="w-16 h-16 md:w-20 md:h-20 rounded-[30px] object-cover transition-transform duration-150 group-hover:scale-110"
+                            className="w-16 h-16 md:w-20 md:h-20 rounded-[15px] md:rounded-[30px] object-cover transition-transform duration-150 group-hover:scale-110"
                         />
                     </a>
                 </div>
