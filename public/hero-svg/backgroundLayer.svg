@@ -172,7 +172,55 @@
 <path d="M980.734 938.187C980.76 938.023 980.755 937.676 980.858 937.364C982.014 933.864 983.185 930.365 984.361 926.87C984.438 926.637 984.536 926.37 984.717 926.226C984.887 926.092 985.181 926.062 985.413 926.067C985.547 926.072 985.733 926.221 985.8 926.35C986.094 926.905 986.016 927.495 985.841 928.06C984.835 931.341 983.809 934.618 982.777 937.889C982.653 938.286 982.442 938.663 982.215 939.015C982.024 939.317 981.704 939.441 981.322 939.357C980.91 939.262 980.827 938.935 980.755 938.603C980.734 938.524 980.745 938.435 980.734 938.182V938.187Z" fill="#053F28"/>
 <path d="M981.818 927.465C981.782 927.743 981.777 928.169 981.659 928.565C980.849 931.287 980.013 934.003 979.188 936.724C979.064 937.136 978.899 937.508 978.507 937.75C978.187 937.949 977.826 937.983 977.527 937.79C977.341 937.671 977.186 937.399 977.161 937.18C977.124 936.858 977.171 936.511 977.274 936.199C978.223 933.255 979.188 930.31 980.152 927.371C980.23 927.133 980.292 926.885 980.405 926.662C980.56 926.345 980.823 926.107 981.199 926.127C981.617 926.146 981.741 926.479 981.782 926.826C981.803 926.989 981.798 927.158 981.813 927.465H981.818Z" fill="#053F28"/>
 <g filter="url(#filter0_nf_2059_103)">
-<ellipse cx="960.5" cy="997.349" rx="87.5" ry="86.3487" fill="url(#paint32_radial_2059_103)" fill-opacity="0.84"/>
+<ellipse cx="960.5" cy="997" rx="121.5" ry="120" fill="url(#paint32_radial_2059_103)" fill-opacity="0.84">
+<animate attributeName="fill-opacity" values="0.84; 0.75; 0.88; 0.72; 0.86; 0.84" dur="2.9s" repeatCount="indefinite"/>
+<animate attributeName="rx" values="121.5; 125; 118; 123; 119; 121.5" dur="3.1s" repeatCount="indefinite"/>
+<animate attributeName="ry" values="120; 117; 124; 118; 122; 120" dur="4.7s" repeatCount="indefinite"/>
+<animate attributeName="cx" values="960.5; 964.5; 961; 956.5; 959; 960.5" dur="3.7s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="997; 993; 1001; 998; 994; 997" dur="4.3s" repeatCount="indefinite"/>
+</ellipse>
+</g>
+<g id="sparks" fill="#FFA500">
+<circle cx="945" cy="1000" r="2" opacity="0" fill="#FF8C00">
+<animate attributeName="cy" values="1000; 920" dur="2s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="2s" repeatCount="indefinite"/>
+<animate attributeName="cx" values="945; 935; 955; 940" dur="2s" repeatCount="indefinite"/>
+</circle>
+<circle cx="970" cy="1010" r="3" opacity="0">
+<animate attributeName="cy" values="1010; 910" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+<animate attributeName="cx" values="970; 980; 960; 975" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+</circle>
+<circle cx="980" cy="995" r="1.5" opacity="0" fill="#FF4500">
+<animate attributeName="cy" values="995; 890" dur="1.8s" repeatCount="indefinite" begin="1s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="1.8s" repeatCount="indefinite" begin="1s"/>
+<animate attributeName="cx" values="980; 975; 985; 980" dur="1.8s" repeatCount="indefinite" begin="1s"/>
+</circle>
+<circle cx="950" cy="1005" r="2.5" opacity="0" fill="#FF7F50">
+<animate attributeName="cy" values="1005; 930" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
+<animate attributeName="cx" values="950; 945; 960; 945" dur="2.2s" repeatCount="indefinite" begin="1.2s"/>
+</circle>
+<circle cx="955" cy="990" r="2" opacity="0" fill="#FF8C00">
+<animate attributeName="cy" values="990; 900" dur="2.7s" repeatCount="indefinite" begin="1.7s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="2.7s" repeatCount="indefinite" begin="1.7s"/>
+<animate attributeName="cx" values="955; 950; 965; 955" dur="2.7s" repeatCount="indefinite" begin="1.7s"/>
+</circle>
+<circle cx="965" cy="1000" r="1.5" opacity="0">
+<animate attributeName="cy" values="1000; 880" dur="3s" repeatCount="indefinite" begin="0.2s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="3s" repeatCount="indefinite" begin="0.2s"/>
+<animate attributeName="cx" values="965; 975; 955; 970" dur="3s" repeatCount="indefinite" begin="0.2s"/>
+</circle>
+<circle cx="960" cy="1005" r="2" opacity="0" fill="#FF4500">
+<animate attributeName="cy" values="1005; 915" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+<animate attributeName="cx" values="960; 955; 965; 960" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+</circle>
+<circle cx="955" cy="995" r="2.5" opacity="0" fill="#FF8C00">
+<animate attributeName="cy" values="995; 895" dur="2.9s" repeatCount="indefinite" begin="1.4s"/>
+<animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.2; 0.8; 1" dur="2.9s" repeatCount="indefinite" begin="1.4s"/>
+<animate attributeName="cx" values="955; 965; 945; 960" dur="2.9s" repeatCount="indefinite" begin="1.4s"/>
+</circle>
 </g>
 <rect x="897" y="916" width="125.711" height="159" fill="url(#pattern0_2059_103)"/>
 <path d="M1397.54 896.619C1405.81 888.751 1424.69 864.928 1433.09 854C1440.96 873.771 1461.25 885.943 1470.42 889.558C1464.87 894.35 1444.19 882.245 1449.23 888.297C1454.28 894.35 1473.95 903.68 1468.65 902.672C1464.42 901.865 1452.09 900.654 1446.46 900.15C1451.76 918.055 1478.49 919.82 1475.97 921.586C1473.95 922.998 1458.99 920.997 1451.76 919.82C1465.37 934.699 1480 933.438 1480 936.969C1480 939.793 1463.86 940.331 1455.79 940.247C1463.36 949.326 1489.58 951.343 1488.83 953.361C1488.22 954.975 1471.26 954.033 1462.85 953.361C1463.26 960.019 1474.45 962.524 1480 962.944L1482.52 966.727C1476.07 969.753 1454.28 962.944 1444.19 959.161C1444.7 961.683 1423.26 975.301 1412.67 977.319C1404.28 978.915 1417.1 964.518 1424.78 956.884C1419.29 962.036 1397.57 965.178 1400.06 962.944C1402.08 961.128 1404.43 955.799 1405.35 953.361C1392.64 953.966 1386.61 952.268 1385.18 951.343C1398.9 943.274 1414.94 930.832 1421.24 925.621C1405.1 936.717 1396.19 935.456 1393.75 933.438C1405.02 925.21 1418.05 911.087 1424.96 902.952C1417.34 909.317 1397.54 911.289 1397.54 909.733C1397.54 908.321 1411.15 897.04 1417.96 891.576C1407.71 896.535 1389.26 904.487 1397.54 896.619Z" fill="url(#paint33_linear_2059_103)"/>
@@ -254,7 +302,7 @@
 <path d="M810.352 939.959L806.725 942.175C805.162 943.13 803.243 941.655 803.765 939.898L805.982 932.443C806.556 930.511 809.306 930.546 809.83 932.493L811.241 937.732C811.471 938.589 811.11 939.496 810.352 939.959Z" fill="url(#paint43_linear_2059_103)"/>
 </g>
 <defs>
-<filter id="filter0_nf_2059_103" x="868.395" y="906.395" width="184.211" height="181.908" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_nf_2059_103" x="834.395" y="872.395" width="252.211" height="249.211" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feTurbulence type="fractalNoise" baseFrequency="1.73714280128479 1.73714280128479" stitchTiles="stitch" numOctaves="3" result="noise" seed="2297" />
@@ -402,9 +450,9 @@
 <stop offset="0.331731" stop-color="#DBB95F"/>
 <stop offset="1" stop-color="#756333" stop-opacity="0.5"/>
 </linearGradient>
-<radialGradient id="paint32_radial_2059_103" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960.5 997.349) rotate(180) scale(86.3487 87.5)">
+<radialGradient id="paint32_radial_2059_103" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960.5 997) rotate(180) scale(119.901 121.6)">
 <stop offset="0.110577" stop-color="#FF5600"/>
-<stop offset="1" stop-color="#9B6A6A" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#9B6A6A" stop-opacity="0.15"/>
 </radialGradient>
 <linearGradient id="paint33_linear_2059_103" x1="1437.01" y1="854" x2="1437.01" y2="977.441" gradientUnits="userSpaceOnUse">
 <stop stop-color="#008F58"/>
