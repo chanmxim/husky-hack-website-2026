@@ -34,7 +34,6 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
 
     const createMemberList = (members: TeamMember[], index: number) =>
         members
-            .sort((a, b) => b.position.length - a.position.length)
             .map((member) => (
                 <div
                     key={`${member.displayName}-${index}`}
