@@ -41,7 +41,7 @@ export default function TeamGrid({
                         {group.title}
                     </h3>
 
-                    <div className="flex flex-wrap justify-start gap-2 sm:gap-3 max-w-[90%] mx-auto">
+                    <div className="flex w-full flex-wrap justify-center gap-2 sm:gap-3 max-w-[90%] mx-auto">
                         {group.members
                             .map((teamMember, index) => (
                                 <div
