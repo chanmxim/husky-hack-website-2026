@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import danielCampus from "../../assets/gbp-daniels-campus.png";
 import studentsLearning from "../../assets/gbp-students-learning.png";
 export default function AboutUsSection() {
@@ -8,22 +9,21 @@ export default function AboutUsSection() {
             id="About-Us"
         >
             <div className="absolute flex flex-row items-center bottom-0 z-20 h-full w-full justify-between px-[20px]">
-                <div className="hidden absolute bottom-0 w-1/4 relative h-auto top-[100px] md:block">
+                <div className="hidden w-1/4 h-auto md:block">
                     <Image
                         src={studentsLearning}
                         alt="GBP Students Learning"
-                        className="w-auto h-auto "
+                        className="w-auto h-auto"
                         width={800}
                         height={800}
                     />
                 </div>
-                <div className="flex-1 w-full relative flex flex-col items-center top-0 h-full gap-4 md:w-3/4">
+                <div className="flex-1 w-full relative flex flex-col items-center h-full gap-4 md:w-1/2 pt-20">
                     <h2 className="text-white text-3xl font-rethink font-semibold">
                         ABOUT US
                     </h2>
-                    <h1 className="text-4xl md:text-6xl text-[#FED571] text-center font-rethink font-base">
-                        George Brown Polytechnic's{" "}
-                        <strong>largest student-run</strong> hackathon
+                    <h1 className="font-bold text-4xl md:text-6xl text-[#FED571] text-center font-rethink font-base">
+                        George Brown Polytechnic's largest student-run hackathon
                     </h1>
                     <p className="italic text-lg text-gray-300 text-center font-instrument md:not-italic md:text-xl">
                         Spend <strong className="text-white">24 hours</strong>{" "}
@@ -34,7 +34,7 @@ export default function AboutUsSection() {
                         unforgettable memories
                     </p>
                 </div>
-                <div className="relative bottom-0 hidden w-1/4 h-auto top-[100px] md:block">
+                <div className="hidden w-1/4 h-auto md:block">
                     <Image
                         src={danielCampus}
                         alt="Daniels Campus"
@@ -53,6 +53,23 @@ export default function AboutUsSection() {
                     fill
                     sizes="100vw"
                 />
+            </div>
+            <div className="absolute bottom-[70px] left-0 right-0 flex justify-center z-10">
+                <div className="relative">
+                    <Image
+                        src="/hole.svg"
+                        alt="Hole"
+                        className="w-[350px] md:w-[450px] lg:w-[600] h-auto"
+                        width={796}
+                        height={202}
+                    />
+                    <Link
+                        href="/contact"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-2 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition"
+                    >
+                        <p className="font-[Instrument Sans] font-light text-sm">Build with us</p>
+                    </Link>
+                </div>
             </div>
         </section>
     );
