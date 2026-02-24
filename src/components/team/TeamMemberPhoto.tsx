@@ -14,12 +14,13 @@ export default function TeamMemberPhoto({
 }: TeamMemberPhotoProps) {
     const baseProfilePicturePath =
         mainProfilePicturePath || secondaryProfilePicturePath;
+    const containerClassName = `relative overflow-hidden rounded-3xl ${className}`;
 
     return (
         <div className="group relative inline-block overflow-visible">
             {baseProfilePicturePath ? (
                 <div
-                    className={`relative bg-gray-200 overflow-hidden rounded-3xl ${className}`}
+                    className={`${containerClassName} bg-gray-200`}
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
@@ -38,12 +39,12 @@ export default function TeamMemberPhoto({
                 </div>
             ) : (
                 <div
-                    className={`bg-neutral-700 flex items-center justify-center rounded-3xl ${className} relative`}
+                    className={`${containerClassName} bg-neutral-700 flex items-center justify-center`}
                 >
                     <img
                         src="/team-profiles/default-profile.svg"
                         alt="Default Profile"
-                        className="w-14 h-14 md:w-16 md:h-16 object-contain"
+                        className="w-14 h-14 md:w-16 md:h-16 object-contain block"
                     />
                 </div>
             )}

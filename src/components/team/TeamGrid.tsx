@@ -41,25 +41,8 @@ export default function TeamGrid({
                         {group.title}
                     </h3>
 
-                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-[90%]">
+                    <div className="flex flex-wrap justify-start gap-2 sm:gap-3 max-w-[90%] mx-auto">
                         {group.members
-                            .sort((a, b) => {
-                                const getRank = (position: string) => {
-                                    const pos = position.toLowerCase();
-                                    if (pos.includes("co-lead")) return 0;
-                                    if (pos.includes("lead")) return 1;
-                                    return 2;
-                                };
-
-                                const rankA = getRank(a.position);
-                                const rankB = getRank(b.position);
-
-                                if (rankA !== rankB) return rankA - rankB;
-
-                                return a.displayName.localeCompare(
-                                    b.displayName,
-                                );
-                            })
                             .map((teamMember, index) => (
                                 <div
                                     key={`${teamMember.displayName}-${index}`}
@@ -85,33 +68,25 @@ export default function TeamGrid({
                                                 : "cursor-default"
                                         }`}
                                     >
-                                        <div className="relative">
-                                            <TeamMemberPhoto
-                                                mainProfilePicturePath={
-                                                    teamMember.mainProfilePicturePath
-                                                }
-                                                secondaryProfilePicturePath={
-                                                    teamMember.secondaryProfilePicturePath
-                                                }
-                                                className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-lg sm:rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
-                                            />
-                                            {teamMember.position && (
-                                                <span
-                                                    className={`absolute bottom-1 -right-1 text-[10px] text-white px-3 py-0.5 -rotate-12 font-medium z-10 rounded-sm ${
-                                                        (group.title === "Executive" || teamMember.position.toLowerCase().includes("lead"))
-                                                            ? "bg-[#F97316]"
-                                                            : "bg-gray-500"
-                                                    }`}
-                                                >
-                                                    {teamMember.position}
-                                                </span>
-                                            )}
-                                        </div>
+                                        <TeamMemberPhoto
+                                            mainProfilePicturePath={
+                                                teamMember.mainProfilePicturePath
+                                            }
+                                            secondaryProfilePicturePath={
+                                                teamMember.secondaryProfilePicturePath
+                                            }
+                                            className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-lg sm:rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
+                                        />
 
                                         <div className="text-center w-full mt-2">
                                             <h4 className="font-bold text-xs sm:text-sm md:text-base text-white leading-tight font-rethink truncate">
                                                 {teamMember.displayName}
                                             </h4>
+                                            {teamMember.position && (
+                                                <p className="mt-1 text-[10px] sm:text-xs text-gray-300 leading-tight font-rethink-sans truncate">
+                                                    {teamMember.position}
+                                                </p>
+                                            )}
                                         </div>
                                     </a>
                                 </div>
