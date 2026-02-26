@@ -11,7 +11,7 @@ import {
 export default function FooterSection() {
     return (
         <footer id="Footer" className="pt-10 bg-[#1E2024] flex flex-col">
-            <div className="bg-[#FF7703] rounded-2xl mx-4 mb-4 px-6 py-10 md:px-16 md:py-16 flex flex-col lg:flex-row gap-10 lg:gap-20 min-h-[500px]">
+            <div className="bg-[#FF7703] rounded-tl-3xl rounded-tr-3xl px-6 py-10 md:px-16 md:py-16 flex flex-col lg:flex-row gap-10 lg:gap-20 min-h-[500px]">
                 {/* LEFT COLUMN: Branding & Logo */}
                 <div className="flex flex-col items-start justify-between w-full lg:w-5/12 h-full">
                     <div>
@@ -53,7 +53,7 @@ export default function FooterSection() {
                         </div>
                     </div>
 
-                    <div className="mt-8 w-40 md:w-48">
+                    <div className="mt-8 w-40 md:w-48 hidden md:block">
                         <Image
                             src="/huskyhacklogo.svg"
                             alt="HuskyHack Logo"
