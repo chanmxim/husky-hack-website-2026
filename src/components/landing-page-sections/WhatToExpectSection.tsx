@@ -23,7 +23,7 @@ const FeatureCard = ({
         className={`flex flex-col items-center flex-1 text-center w-fit ${className}`}
     >
         <div
-            className={`w-full flex items-center justify-center hover:animate-wiggle`}
+            className={`w-full flex items-center justify-center hover:animate-wiggle mb-4`}
         >
             <Image src={image} alt={title} className={imageClassName} />
         </div>
@@ -111,8 +111,8 @@ const WhatToExpectSection = () => {
                     height={1}
                 />
             </div>
-            <h1 className="relative z-10 text-3xl md:text-4xl font-bold text-center mt-8 md:mt-12 font-rethink-sans">
-                What to Expect
+            <h1 className="relative z-10 text-3xl font-semibold text-center mt-8 md:mt-12 font-rethink-sans">
+                WHAT TO EXPECT
             </h1>
 
             <div className="flex flex-col justify-evenly gap-32 md:gap-24 mt-24 md:mt-12">
@@ -140,14 +140,33 @@ const WhatToExpectSection = () => {
                     />
                 </div>
 
-                <div className="flex flex-col items-center gap-4 mt-24 md:mt-32">
-                    <h3 className="text-xl md:text-2xl font-bold text-center mb-8 md:z-10 font-rethink-sans">
+                <div className="grid grid-cols-1 xl:grid-cols-3 items-center justify-items-center gap-4 mt-14 md:mt-24 z-10 w-full">
+                    <div className="hidden h-auto xl:block xl:justify-self-end">
+                        <Image
+                            src={'/laptop-falling.svg'}
+                            alt="Laptop Falling"
+                            className="w-[200px] h-[200px] object-cover"
+                            width={400}
+                            height={400}
+                        />
+                    </div>
+                    <h3 className="text-xl md:text-2xl italic font-rethink-sans text-center xl:col-start-2 text-[#fbbf24]">
                         And more along the journey...
                     </h3>
-                    <h2 className="text-3xl md:text-5xl font-bold text-center mt-12 md:z-10 font-rethink-sans">
-                        How to Participate
-                    </h2>
+                    <div className="hidden h-auto xl:block xl:justify-self-start">
+                        <Image
+                            src={'/husky-falling2.svg'}
+                            alt="Husky Falling"
+                            className="w-2/3 h-auto object-cover"
+                            width={400}
+                            height={400}
+                        />
+                    </div>
                 </div>
+
+                <h2 className="text-2xl font-semibold text-center mt-12 md:z-10 font-rethink-sans">
+                    HOW TO PARTICIPATE
+                </h2>
 
                 {/* Section 2: Hacker, Mentor, Sponsor Cards */}
                 <div className="relative z-10 flex flex-col lg:flex-row justify-center gap-8 w-full max-w-6xl mx-auto px-4 items-center">
