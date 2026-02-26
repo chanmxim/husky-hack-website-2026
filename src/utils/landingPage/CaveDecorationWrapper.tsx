@@ -12,7 +12,6 @@ const CaveDecorationWrapper = ({ children }: { children: React.ReactNode }) => {
                         className="h-full w-auto object-cover md:max-w-none translate-x-[-50%] md:translate-x-0"
                         width={500}
                         height={1000}
-                        unoptimized
                     />
                 </div>
 
@@ -23,7 +22,6 @@ const CaveDecorationWrapper = ({ children }: { children: React.ReactNode }) => {
                         className="h-full w-auto object-cover md:max-w-none translate-x-[50%] md:translate-x-0"
                         width={500}
                         height={1000}
-                        unoptimized
                     />
                 </div>
             </div>

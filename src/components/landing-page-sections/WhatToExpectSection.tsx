@@ -164,7 +164,7 @@ const WhatToExpectSection = () => {
                     </div>
                 </div>
 
-                <h2 className="text-2xl font-semibold text-center mt-12 md:z-10 font-rethink-sans">
+                <h2 className="text-3xl font-semibold text-center mt-12 md:z-10 font-rethink-sans">
                     HOW TO PARTICIPATE
                 </h2>
 
