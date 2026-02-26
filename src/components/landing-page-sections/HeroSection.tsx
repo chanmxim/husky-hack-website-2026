@@ -1,14 +1,26 @@
+"use client";
+
 import Firefly from "../FireFly.tsx";
 import NewsletterForm from "../NewsletterForm";
 import SponsorContactLink from "../SponsorContactLink";
 import { MapPin, ArrowDown } from 'lucide-react';
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
 export default function HeroSection() {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => setScrollY(window.scrollY);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const arrowOpacity = Math.max(0, 0.5 - scrollY / 300);
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-center text-white">
-            <div className="z-20 text-center px-4 flex flex-col items-center justify-center mt-10 md:mt-0">
+        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-32 text-white">
+            <div className="z-20 text-center px-4 flex flex-col items-center">
                 <h1 className="text-6xl md:text-8xl font-bold">
                     <span className="text-amber-200">HuskyHack</span>
                 </h1>
@@ -18,18 +30,23 @@ export default function HeroSection() {
                 </p>
 
                 <p className="text-base text-gray-300 pt-1">
-                    May 2026 • <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
+                    May 2026 <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
                 </p>
 
                 <div className="mt-7">
                     <NewsletterForm />
                 </div>
 
+                <div className="mt-7 flex flex-col items-center">
+                    <SponsorContactLink />
+                    <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce" style={{ opacity: arrowOpacity }}/>
+                </div>
+
 
             </div>
 
             {/* Svg Background layer */}
-            <div className="absolute bottom-0 w-full h-full z-10">
+            <div className="absolute inset-0 z-10 -top-12 md:top-0">
                 <Image
                     src="/hero-svg/backgroundLayer.svg"
                     alt="Camping landscape"
@@ -55,10 +72,6 @@ export default function HeroSection() {
                 <Firefly top="60%" left="60%" widthRange={40} heightRange={40} />
                 <Firefly top="85%" left="30%" size="3px" widthRange={20} heightRange={20} />
                 <Firefly top="90%" left="65%" size="5px" widthRange={50} heightRange={50} minDurationX={5} maxDurationX={10} />
-            </div>
-            <div className="mt-7 absolute bottom-20 z-10 flex flex-col items-center">
-                <SponsorContactLink />
-                <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce opacity-50"/>
             </div>
 
         </section>
