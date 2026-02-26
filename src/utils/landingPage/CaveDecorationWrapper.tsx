@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const CaveDecorationWrapper = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="relative pt-12 md:pt-48 text-white overflow-hidden bg-[linear-gradient(to_bottom,#1C6D41,#243B5C,#090F18,#030609)] min-h-screen h-auto">
+        <div className="relative pt-12 md:pt-48 text-white overflow-hidden bg-[linear-gradient(to_bottom,#1C6D41,#243B5C,#090F18,#030609)] md:bg-[linear-gradient(to_bottom,#203046,#151F2E,#11151C)] min-h-screen h-auto">
             {/* Background  */}
             <div className="opacity-0 md:opacity-100 lg:opacity-100">
                 <div className="absolute top-0 left-0 h-full w-auto z-0 pointer-events-none lg:opacity-100">
