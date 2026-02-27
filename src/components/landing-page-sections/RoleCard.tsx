@@ -15,19 +15,19 @@ const DEFAULT_ROLE_CARD_COLORS: RoleCardColors = {
 
 const ROLE_CARD_COLORS_BY_LOGO: Record<string, RoleCardColors> = {
     "/husky-hack-hacker-logo.svg": {
-        outerBadgeColor: "#7C5024",
-        borderBadgeColor: "#733E0A",
-        innerBadgeColor: "#D96300",
+        outerBadgeColor: "#8C5B22",
+        borderBadgeColor: "#6F4516",
+        innerBadgeColor: "#a17f54",
     },
     "/husky-hack-mentor-logo.svg": {
-        outerBadgeColor: "#25588D",
-        borderBadgeColor: "#1A4673",
-        innerBadgeColor: "#006FE3",
+        outerBadgeColor: "#2A5278",
+        borderBadgeColor: "#1E3F5D",
+        innerBadgeColor: "#2C6EA6",
     },
     "/husky-hack-sponsor-logo.svg": {
-        outerBadgeColor: "#216b3f",
-        borderBadgeColor: "#055e3c",
-        innerBadgeColor: "#5E8F47",
+        outerBadgeColor: "#365E45",
+        borderBadgeColor: "#2A4C37",
+        innerBadgeColor: "#008F58",
     },
 };
 
@@ -58,7 +58,7 @@ const RoleCard = ({
         getRoleCardColors(image);
 
     return (
-        <div className="flex flex-col items-center text-center flex-1">
+        <div className="w-full max-w-[360px] flex flex-col items-center text-center flex-1">
             <div className="translate-y-8 w-32 h-32 rounded-full overflow-hidden flex items-center justify-center">
                 <Image
                     src={image}
@@ -69,16 +69,16 @@ const RoleCard = ({
                 />
             </div>
 
-            <div className="p-1.5 rounded-[42px]" style={{ backgroundColor: outerBadgeColor }}>
+            <div className="w-full p-1.5 rounded-[42px]" style={{ backgroundColor: outerBadgeColor }}>
                 <div
-                    className="p-1.5 rounded-[36px] border-[3px]"
+                    className="w-full p-1.5 rounded-[36px] border-[3px]"
                     style={{
                         backgroundColor: innerBadgeColor,
                         borderColor: borderBadgeColor,
                     }}
                 >
                     <div
-                        className="rounded-[30px] p-4"
+                        className="w-full rounded-[30px] p-4"
                         style={{
                             borderColor: outerBadgeColor,
                             borderStyle: "dashed",
@@ -98,7 +98,7 @@ const RoleCard = ({
                                 href={buttonLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block w-full max-w-[200px]"
+                                className="inline-block w-full max-w-[200px] mx-auto"
                             >
                                 <button
                                     disabled={disabled}
@@ -112,16 +112,18 @@ const RoleCard = ({
                                 </button>
                             </Link>
                         ) : (
-                            <button
-                                disabled={disabled}
-                                className="disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink-sans"
-                                style={{
-                                    backgroundColor: borderBadgeColor,
-                                    border: `2px solid ${borderBadgeColor}`,
-                                }}
-                            >
-                                {buttonText}
-                            </button>
+                            <div className="w-full max-w-[200px] mx-auto">
+                                <button
+                                    disabled={disabled}
+                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink-sans"
+                                    style={{
+                                        backgroundColor: borderBadgeColor,
+                                        border: `2px solid ${borderBadgeColor}`,
+                                    }}
+                                >
+                                    {buttonText}
+                                </button>
+                            </div>
                         )}
                     </div>
                 </div>
