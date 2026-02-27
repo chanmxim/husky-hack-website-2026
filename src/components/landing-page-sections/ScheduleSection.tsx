@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ScheduleSection() {
     return (
-        <section className="relative w-full mt-24 min-h-[600px] md:min-h-[700px] flex items-center" id="Schedule">
+        <section className="relative w-full mt-3 min-h-[600px] md:min-h-[700px] flex items-center" id="Schedule">
             {/* Left Content (Text) */}
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
                 <div className="flex flex-col justify-center">

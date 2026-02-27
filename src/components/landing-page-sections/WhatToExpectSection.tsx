@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import packResults from "../../assets/WhatToExpect/pack.png";
 import trailHonour from "../../assets/WhatToExpect/trail_honours.png";
 import scoutMentor from "../../assets/WhatToExpect/scout_mentor.png";
-import Link from "next/link";
+import RoleCard from "./RoleCard";
 
 interface FeatureCardProps {
     image: StaticImageData;
@@ -23,7 +23,7 @@ const FeatureCard = ({
         className={`flex flex-col items-center flex-1 text-center w-fit ${className}`}
     >
         <div
-            className={`w-full flex items-center justify-center hover:animate-wiggle`}
+            className={`w-full flex items-center justify-center hover:animate-wiggle mb-4`}
         >
             <Image src={image} alt={title} className={imageClassName} />
         </div>
@@ -33,69 +33,6 @@ const FeatureCard = ({
         <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument-sans">
             {description}
         </p>
-    </div>
-);
-
-interface RoleCardProps {
-    image?: StaticImageData | string;
-    title: string;
-    description: string;
-    buttonText: string;
-    disabled?: boolean;
-    buttonLink?: string;
-}
-
-const RoleCard = ({
-    image = "/huskyhacklogo.svg",
-    title,
-    description,
-    buttonText,
-    disabled = false,
-    buttonLink,
-}: RoleCardProps) => (
-    <div className="relative bg-[#1e293b] rounded-3xl p-8 pt-20 flex flex-col items-center text-center flex-1 shadow-lg hover:scale-105 transition-transform duration-300 max-w-[fit-content] mt-16">
-        {/* Image Container: Absolute positioned to stick out the top */}
-        <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-orange-100 border-4 border-[#92400e] overflow-hidden flex items-center justify-center shadow-md">
-            <Image
-                src={image}
-                alt={title}
-                className="object-cover w-full h-full"
-                width={1}
-                height={1}
-            />
-        </div>
-
-        {/* Content: Now follows naturally because of the pt-20 on the parent */}
-        <h3 className="text-2xl md:text-3xl font-bold text-[#fbbf24] pb-1 mb-4 w-full underline font-rethink-sans">
-            {title}
-        </h3>
-
-        <p className="text-gray-300 mb-8 text-sm leading-relaxed font-instrument-sans">
-            {description}
-        </p>
-
-        {buttonLink ? (
-            <Link
-                href={buttonLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-[200px]"
-            >
-                <button
-                    disabled={disabled}
-                    className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full font-rethink-sans"
-                >
-                    {buttonText}
-                </button>
-            </Link>
-        ) : (
-            <button
-                disabled={disabled}
-                className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full max-w-[200px] font-rethink-sans"
-            >
-                {buttonText}
-            </button>
-        )}
     </div>
 );
 
@@ -111,11 +48,11 @@ const WhatToExpectSection = () => {
                     height={1}
                 />
             </div>
-            <h1 className="relative z-10 text-3xl md:text-4xl font-bold text-center mt-8 md:mt-12 font-rethink-sans">
-                What to Expect
+            <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 font-rethink-sans">
+                WHAT TO EXPECT
             </h1>
 
-            <div className="flex flex-col justify-evenly gap-32 md:gap-24 mt-24 md:mt-12">
+            <div className="flex flex-col justify-evenly gap-32 md:gap-16 mt-10 md:mt-4">
                 {/* Features */}
                 <div className="relative z-10 flex flex-col md:flex-row gap-24 md:gap-0 justify-center items-center w-full max-w-6xl mx-auto">
                     <FeatureCard
@@ -140,25 +77,46 @@ const WhatToExpectSection = () => {
                     />
                 </div>
 
-                <div className="flex flex-col items-center gap-4 mt-24 md:mt-32">
-                    <h3 className="text-xl md:text-2xl font-bold text-center mb-8 md:z-10 font-rethink-sans">
+                <div className="grid grid-cols-1 xl:grid-cols-3 items-center justify-items-center gap-4 mt-10 z-10 w-full">
+                    <div className="hidden h-auto xl:block xl:justify-self-end">
+                        <Image
+                            src={'/laptop-falling.svg'}
+                            alt="Laptop Falling"
+                            className="w-[200px] h-[200px] object-cover"
+                            width={400}
+                            height={400}
+                        />
+                    </div>
+                    <h3 className="text-xl md:text-2xl italic font-rethink-sans text-center xl:col-start-2 text-[#fbbf24]">
                         And more along the journey...
                     </h3>
-                    <h2 className="text-3xl md:text-5xl font-bold text-center mt-12 md:z-10 font-rethink-sans">
-                        How to Participate
-                    </h2>
+                    <div className="hidden h-auto xl:block xl:justify-self-start">
+                        <Image
+                            src={'/husky-falling2.svg'}
+                            alt="Husky Falling"
+                            className="w-2/3 h-auto object-cover"
+                            width={400}
+                            height={400}
+                        />
+                    </div>
                 </div>
+
+                <h2 className="text-3xl font-semibold text-center md:z-10 font-rethink-sans">
+                    HOW TO PARTICIPATE
+                </h2>
 
                 {/* Section 2: Hacker, Mentor, Sponsor Cards */}
                 <div className="relative z-10 flex flex-col lg:flex-row justify-center gap-8 w-full max-w-6xl mx-auto px-4 items-center">
                     <RoleCard
+                        image={'/husky-hack-hacker-logo.svg'}
                         title="Hacker"
                         description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
                         buttonText="Apply"
-                        disabled={true}
+                        disabled={false}
                     />
 
                     <RoleCard
+                        image={'/husky-hack-mentor-logo.svg'}
                         title="Mentor"
                         description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead campers toward their 'aha' moments."
                         buttonText="Apply"
@@ -166,6 +124,7 @@ const WhatToExpectSection = () => {
                     />
 
                     <RoleCard
+                        image={'/husky-hack-sponsor-logo.svg'}
                         title="Sponsor"
                         description="Fuel the adventure. Equip our campers with resources, showcase your brand, and scout for the next generation of tech talent."
                         buttonText="Apply"

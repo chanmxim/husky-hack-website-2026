@@ -22,7 +22,7 @@ export default function HeroSection() {
         <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-32 text-white">
             <div className="z-20 text-center px-4 flex flex-col items-center">
                 <h1 className="text-6xl md:text-8xl font-bold">
-                    <span className="text-amber-200">HuskyHack</span>
+                    <span className="text-[#FED571]">HuskyHack</span>
                 </h1>
 
                 <p className="text-white italic pt-7">
