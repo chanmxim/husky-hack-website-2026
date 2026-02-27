@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import packResults from "../../assets/WhatToExpect/pack.png";
 import trailHonour from "../../assets/WhatToExpect/trail_honours.png";
 import scoutMentor from "../../assets/WhatToExpect/scout_mentor.png";
-import Link from "next/link";
+import RoleCard from "./RoleCard";
 
 interface FeatureCardProps {
     image: StaticImageData;
@@ -33,93 +33,6 @@ const FeatureCard = ({
         <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument-sans">
             {description}
         </p>
-    </div>
-);
-
-interface RoleCardProps {
-    image?: StaticImageData | string;
-    title: string;
-    description: string;
-    buttonText: string;
-    disabled?: boolean;
-    buttonLink?: string;
-    outerBadgeColor?: string;
-    borderBadgeColor?: string;
-    innerBadgeColor?: string;
-}
-
-const RoleCard = ({
-    image = "/huskyhacklogo.svg",
-    title,
-    description,
-    buttonText,
-    disabled = false,
-    buttonLink,
-    outerBadgeColor = "#216b3f",
-    borderBadgeColor = "#055e3c",
-    innerBadgeColor = "#008f58",
-}: RoleCardProps) => (
-    <div className="flex flex-col items-center text-center flex-1">
-        <div className="translate-y-8
-        w-32 h-32 rounded-full overflow-hidden flex items-center justify-center">
-            <Image
-                src={image}
-                alt={title}
-                className="object-cover w-full h-full"
-                width={1}
-                height={1}
-            />
-        </div>
-
-        <div className={`p-1.5 rounded-[42px]`} style={{
-            backgroundColor: outerBadgeColor
-        }} >
-            <div className="p-1.5 rounded-[36px] border-[3px]" style={{
-                backgroundColor: innerBadgeColor,
-                borderColor: borderBadgeColor,
-            }}>
-                <div className="rounded-[30px] p-4" style={{
-                    borderColor: outerBadgeColor,
-                    borderStyle: "dashed",
-                    borderWidth: "3px",
-                }}>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white pb-1 mb-1 w-full font-rethink-sans">
-                        {title}
-                    </h3>
-
-                    <p className="text-white mb-4 text-md leading-relaxed font-instrument-sans">
-                        {description}
-                    </p>
-
-                    {buttonLink ? (
-                        <Link
-                            href={buttonLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full max-w-[200px]"
-                        >
-                            <button
-                                disabled={disabled}
-                                className="disabled:opacity-50 disabled:cursor-not-allowed font-bold py-3 px-12 rounded-full transition-colors mt-auto  font-rethink-sans "
-                                style={{
-                                    backgroundColor: borderBadgeColor,
-                                    border: `2px solid ${borderBadgeColor}`,
-                                }}
-                            >
-                                {buttonText}
-                            </button>
-                        </Link>
-                    ) : (
-                        <button
-                            disabled={disabled}
-                            className="disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto font-rethink-sans"
-                        >
-                            {buttonText}
-                        </button>
-                    )}
-                </div>
-            </div>
-        </div>
     </div>
 );
 
