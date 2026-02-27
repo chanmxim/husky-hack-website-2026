@@ -1,12 +1,12 @@
 "use client";
 
 import Firefly from "../FireFly.tsx";
-import NewsletterForm from "../NewsletterForm";
-import SponsorContactLink from "../SponsorContactLink";
-import { MapPin, ArrowDown } from 'lucide-react';
+import { MapPin, ArrowDown, Calendar } from 'lucide-react';
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 import Image from "next/image";
+import { Calendar01FreeIcons } from "@hugeicons/core-free-icons";
 
 export default function HeroSection() {
     const [scrollY, setScrollY] = useState(0);
@@ -19,30 +19,43 @@ export default function HeroSection() {
 
     const arrowOpacity = Math.max(0, 0.5 - scrollY / 300);
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-32 text-white">
+        <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-40 text-white">
             <div className="z-20 text-center px-4 flex flex-col items-center">
                 <h1 className="text-6xl md:text-8xl font-bold">
                     <span className="text-[#FED571]">HuskyHack</span>
                 </h1>
 
-                <p className="text-white italic pt-7">
-                    Where curious minds find their pack
+
+                <p className="text-white text-lg md:text-xl pt-5">
+                    {/* <Calendar className="inline text-gray-400 mx-2" />  */}
+                    May 1-2, 2026 
+                    <span className="text-gray-400 mx-2">•</span>
+                    {/* <MapPin className="inline text-gray-400 mx-2" />  */}
+                    George Brown Polytechnic, Waterfront
+                    {/* George Brown Polytechnic's student-run 24h hackathon */}
                 </p>
 
-                <p className="text-base text-gray-300 pt-1">
-                    May 2026 <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
-                </p>
+                {/* <p className="text-base text-gray-300 pt-1">
+                    May 1-2, 2026 <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
+                </p> */}
 
-                <div className="mt-7">
-                    <NewsletterForm />
+                <div className="mt-10 flex flex-col items-center gap-2">
+                    <Link
+                        href="/registration/hacker"
+                        className="px-8 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition"
+                    >
+                        <span className="font-rethink-sans text-sm">Apply Now!</span>
+                    </Link>
+                    <p className="text-sm text-gray-300">Applications close April 4th.</p>
                 </div>
 
-                <div className="mt-7 flex flex-col items-center">
-                    <SponsorContactLink />
+                <div className="mt-5 flex flex-col items-center">
                     <ArrowDown className="w-6 h-6 text-white mt-4 animate-bounce" style={{ opacity: arrowOpacity }}/>
                 </div>
 
-
+                {/* <p className="text-[#FED571] italic pt-7">
+                    Where curious minds find their pack
+                </p> */}
             </div>
 
             {/* Svg Background layer */}
