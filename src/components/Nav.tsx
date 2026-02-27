@@ -10,16 +10,16 @@ export default function NavBar() {
 
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-lg border-white/20">
-      <div className="bg-[#08182D] h-24 px-[5vw] text-white">
+      <div className="bg-[#08182D] h-20 px-[5vw] text-white">
         <div className="grid grid-cols-[1fr_auto_1fr] h-full items-center">
 
           {/* Left Section */}
           <a href="../" className="flex items-center gap-[0.5vw] w-fit">
-            <Image src={logo} alt="Logo" width={58} height={58} />
+            <Image src={logo} alt="Logo" width={50} height={50} />
           </a>
 
           {/* Centre Section*/}
-          <div className="hidden md:flex items-center gap-[clamp(1vw,5vw,4vw)] font-[Rethink Sans] font-semibold">
+          <div className="hidden md:flex items-center gap-[clamp(1vw,5vw,4vw)] font-[Instrument Sans]">
             <Link href="#About-Us" className="hover:text-[#FED571] transition">About</Link>
             <Link href="#Schedule" className="hover:text-[#FED571] transition">Schedule</Link>
             <Link href="#Sponsors" className="hover:text-[#FED571] transition">Sponsors</Link>
@@ -27,12 +27,12 @@ export default function NavBar() {
           </div>
 
           {/* Right Section */}
-          <div className="hidden md:flex items-center justify-end gap-[3vw] font-semibold">
+          <div className="hidden md:flex items-center justify-end gap-[3vw]">
             <Link href="/contact" className="hover:text-[#FED571] transition">
-              <p className="font-[Rethink Sans] font-semibold">Contact</p>
+              <p className="font-[Instrument Sans]">Contact</p>
             </Link>
             <Link href="#Participate" className="whitespace-nowrap px-8 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition">
-              <p className="font-[Rethink Sans] font-semibold">Join Us</p>
+              <p className="font-[Instrument Sans]">Join Us</p>
             </Link>
           </div>
 
@@ -65,7 +65,7 @@ export default function NavBar() {
       {/* Mobile Dropdown Menu */}
       {open && (
         <div className="md:hidden bg-[#08182D] ease-in-out">
-          <div className="flex flex-col items-start gap-6 py-6 px-8 font-semibold text-white">
+          <div className="flex flex-col items-start gap-6 py-6 px-8 text-white">
             <a href="#About-Us" onClick={() => setOpen(false)}>About</a>
             <a href="#Schedule" onClick={() => setOpen(false)}>Schedule</a>
             <a href="#Sponsors" onClick={() => setOpen(false)}>Sponsors</a>
