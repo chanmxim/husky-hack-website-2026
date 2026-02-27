@@ -26,7 +26,9 @@ export default function FooterSection() {
 
                         <div className="flex flex-row gap-4 mt-6">
                             <a
-                                href="/construction"
+                                href={process.env.NEXT_PUBLIC_DISCORD_INVITE_URL || ""}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon icon={DiscordIcon} size={24} />
