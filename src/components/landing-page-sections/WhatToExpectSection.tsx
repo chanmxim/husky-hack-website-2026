@@ -119,17 +119,17 @@ const WhatToExpectSection = () => {
                         <RoleCard
                             image={'/husky-hack-mentor-logo.svg'}
                             title="Mentor"
-                            description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead campers toward their 'aha' moments."
+                            description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead hackers toward their 'aha' moments."
                             buttonText="Apply"
                             disabled={true}
                         />
 
                         <RoleCard
                             image={'/husky-hack-sponsor-logo.svg'}
-                            title="Sponsor"
-                            description="Fuel the adventure. Equip our campers with resources, showcase your brand, and scout for the next generation of tech talent."
+                            title="Judge"
+                            description="Evaluate the projects. Review the teams' final builds, score technical achievements, and select the winning hacks."
                             buttonText="Apply"
-                            buttonLink="/contact"
+                            disabled={true}
                         />
                     </div>
                 </section>
