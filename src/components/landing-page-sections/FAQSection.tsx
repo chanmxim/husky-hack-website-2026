@@ -1,11 +1,20 @@
 import faqs from "../../data/faqs.json";
 import FAQAccordion from "../faq/Accordian";
-import huskyPeekComputer from "../../assets/husky-peek-computer.png";
 import Image from "next/image";
 
 export default function FAQSection() {
     return (
-        <section id="FAQ" className="py-40 pt-10u bg-[linear-gradient(to_right,#1E6D41,#4F743C)]">
+        <section id="FAQ" className="relative pb-40 pt-20 bg-[#1A663C]">
+            <div className="absolute left-0 top-0 z-20 w-full -translate-y-full pointer-events-none">
+                <Image
+                    src="/faq/top-wave.svg"
+                    alt=""
+                    width={1}
+                    height={1}
+                    className="h-auto w-full"
+                    aria-hidden="true"
+                />
+            </div>
             <h1 className="text-xl  md:text-2xl font-rethink-sans text-center mb-10 text-white">FREQUENTLY ASKED QUESTIONS</h1>
 
             <div className="flex flex-col justify-center items-center md:flex-row-reverse gap-4 w-full ">
