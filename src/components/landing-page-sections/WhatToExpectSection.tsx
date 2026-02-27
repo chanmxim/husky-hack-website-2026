@@ -43,6 +43,9 @@ interface RoleCardProps {
     buttonText: string;
     disabled?: boolean;
     buttonLink?: string;
+    outerBadgeColor?: string;
+    borderBadgeColor?: string;
+    innerBadgeColor?: string;
 }
 
 const RoleCard = ({
@@ -52,10 +55,13 @@ const RoleCard = ({
     buttonText,
     disabled = false,
     buttonLink,
+    outerBadgeColor = "#216b3f",
+    borderBadgeColor = "#055e3c",
+    innerBadgeColor = "#008f58",
 }: RoleCardProps) => (
-    <div className="relative bg-[#1e293b] rounded-3xl p-8 pt-20 flex flex-col items-center text-center flex-1 shadow-lg hover:scale-105 transition-transform duration-300 max-w-[fit-content] mt-16">
-        {/* Image Container: Absolute positioned to stick out the top */}
-        <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-orange-100 border-4 border-[#92400e] overflow-hidden flex items-center justify-center shadow-md">
+    <div className="flex flex-col items-center text-center flex-1">
+        <div className="translate-y-8
+        w-32 h-32 rounded-full overflow-hidden flex items-center justify-center">
             <Image
                 src={image}
                 alt={title}
@@ -65,37 +71,55 @@ const RoleCard = ({
             />
         </div>
 
-        {/* Content: Now follows naturally because of the pt-20 on the parent */}
-        <h3 className="text-2xl md:text-3xl font-bold text-[#fbbf24] pb-1 mb-4 w-full underline font-rethink-sans">
-            {title}
-        </h3>
+        <div className={`p-1.5 rounded-[42px]`} style={{
+            backgroundColor: outerBadgeColor
+        }} >
+            <div className="p-1.5 rounded-[36px] border-[3px]" style={{
+                backgroundColor: innerBadgeColor,
+                borderColor: borderBadgeColor,
+            }}>
+                <div className="rounded-[30px] p-4" style={{
+                    borderColor: outerBadgeColor,
+                    borderStyle: "dashed",
+                    borderWidth: "3px",
+                }}>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white pb-1 mb-1 w-full font-rethink-sans">
+                        {title}
+                    </h3>
 
-        <p className="text-gray-300 mb-8 text-sm leading-relaxed font-instrument-sans">
-            {description}
-        </p>
+                    <p className="text-white mb-4 text-md leading-relaxed font-instrument-sans">
+                        {description}
+                    </p>
 
-        {buttonLink ? (
-            <Link
-                href={buttonLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full max-w-[200px]"
-            >
-                <button
-                    disabled={disabled}
-                    className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full font-rethink-sans"
-                >
-                    {buttonText}
-                </button>
-            </Link>
-        ) : (
-            <button
-                disabled={disabled}
-                className="disabled:opacity-50 disabled:cursor-not-allowed bg-[#f97316] hover:bg-[#ea580c] text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto w-full max-w-[200px] font-rethink-sans"
-            >
-                {buttonText}
-            </button>
-        )}
+                    {buttonLink ? (
+                        <Link
+                            href={buttonLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full max-w-[200px]"
+                        >
+                            <button
+                                disabled={disabled}
+                                className="disabled:opacity-50 disabled:cursor-not-allowed font-bold py-3 px-12 rounded-full transition-colors mt-auto  font-rethink-sans "
+                                style={{
+                                    backgroundColor: borderBadgeColor,
+                                    border: `2px solid ${borderBadgeColor}`,
+                                }}
+                            >
+                                {buttonText}
+                            </button>
+                        </Link>
+                    ) : (
+                        <button
+                            disabled={disabled}
+                            className="disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-colors mt-auto font-rethink-sans"
+                        >
+                            {buttonText}
+                        </button>
+                    )}
+                </div>
+            </div>
+        </div>
     </div>
 );
 
@@ -171,13 +195,15 @@ const WhatToExpectSection = () => {
                 {/* Section 2: Hacker, Mentor, Sponsor Cards */}
                 <div className="relative z-10 flex flex-col lg:flex-row justify-center gap-8 w-full max-w-6xl mx-auto px-4 items-center">
                     <RoleCard
+                        image={'/husky-hack-hacker-logo.svg'}
                         title="Hacker"
                         description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
                         buttonText="Apply"
-                        disabled={true}
+                        disabled={false}
                     />
 
                     <RoleCard
+                        image={'/husky-hack-mentor-logo.svg'}
                         title="Mentor"
                         description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead campers toward their 'aha' moments."
                         buttonText="Apply"
@@ -185,6 +211,7 @@ const WhatToExpectSection = () => {
                     />
 
                     <RoleCard
+                        image={'/husky-hack-sponsor-logo.svg'}
                         title="Sponsor"
                         description="Fuel the adventure. Equip our campers with resources, showcase your brand, and scout for the next generation of tech talent."
                         buttonText="Apply"
