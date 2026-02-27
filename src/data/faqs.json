@@ -1,18 +1,58 @@
 [
     {
+        "question": "What is a hackathon?",
+        "answer": "A hackathon is an event where participants spend the weekend building a project with a team to win prizes. It is also an opportunity to network with other developers, mentors, and sponsors."
+    },
+    {
+        "question": "What is HuskyHack?",
+        "answer": "HuskyHack is George Brown Polytechnic's largest student-run 24-hour hackathon, bringing 150 students to the heart of Toronto. While many hackathons focus purely on competition, HuskyHack emphasizes creating a collaborative environment where you can share ideas, find projects you are passionate about, and build strong teams."
+    },
+    {
+        "question": "When & Where is HuskyHack?",
+        "answer": "HuskyHack is happening May 1st-2nd, 2026, at the George Brown Polytechnic Waterfront campus."
+    },
+    {
+        "question": "How much does it cost to attend?",
+        "answer": "HuskyHack is completely free to attend. We provide food, coffee, and a workspace to keep your ideas flowing."
+    },
+    {
         "question": "Who can participate?",
-        "answer": "HuskyHack is open to all students currently enrolled in a college, university, or bootcamp. Recent graduates (within 12 months) are also welcome!"
+        "answer": "Any high school student, undergraduate, or recent university/college graduate."
     },
     {
-        "question": "Does it cost anything?",
-        "answer": "Nope! Admission is free. We provide food, caffeine, and swag for the entire 24 hours."
-    },
-    {
-        "question": "How big can teams be?",
-        "answer": "Teams can be up to 4 people. You can hack with friends or form a team on-site."
+        "question": "Can I participate without a team?",
+        "answer": "Yes, you can work on a project alone, although we highly encourage you to form or join a team to get the most out of the experience."
     },
     {
         "question": "What if I don't have a team?",
         "answer": "No problem! We will host a Team Formation session at the start of the event to help you find teammates."
+    },
+    {
+        "question": "How big can teams be?",
+        "answer": "Teams can have up to 5 members."
+    },
+    {
+        "question": "What do I get from participating?",
+        "answer": "You will gain hands-on experience, learn new skills, network with industry professionals, get free swag, and have a chance to win prizes."
+    },
+    {
+        "question": "Will there be prizes?",
+        "answer": "Yes, specific prizes will be announced closer to the event."
+    },
+    {
+        "question": "What should I bring?",
+        "answer": "A laptop (plus any hardware required for your project), a charger, comfortable clothes, a valid student ID, and your collaborative spirit for the 24 hours."
+    },
+    {
+        "question": "Will there be food?",
+        "answer": "Yes, all meals, snacks, and drinks (including coffee) will be provided."
+    },
+    {
+        "question": "Is there a specific theme or challenge?",
+        "answer": "The main theme will be announced at the start of the competition. There will also be specific categories and challenges with dedicated prizes."
+    },
+    {
+        "question": "What can I build?",
+        "answer": "You are free to build anything that fits the theme. Whether it is a mobile app, web app, robot, IoT device, or game, the choice is yours as long as it demonstrates a working proof of concept supporting your idea."
     }
 ]
