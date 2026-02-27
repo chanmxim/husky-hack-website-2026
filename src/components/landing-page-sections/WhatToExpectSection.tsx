@@ -48,11 +48,11 @@ const WhatToExpectSection = () => {
                     height={1}
                 />
             </div>
-            <h1 className="relative z-10 text-3xl font-semibold text-center mt-8 md:mt-12 font-rethink-sans">
+            <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 font-rethink-sans">
                 WHAT TO EXPECT
             </h1>
 
-            <div className="flex flex-col justify-evenly gap-32 md:gap-24 mt-24 md:mt-12">
+            <div className="flex flex-col justify-evenly gap-32 md:gap-16 mt-10 md:mt-4">
                 {/* Features */}
                 <div className="relative z-10 flex flex-col md:flex-row gap-24 md:gap-0 justify-center items-center w-full max-w-6xl mx-auto">
                     <FeatureCard
@@ -77,7 +77,7 @@ const WhatToExpectSection = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-1 xl:grid-cols-3 items-center justify-items-center gap-4 mt-14 md:mt-24 z-10 w-full">
+                <div className="grid grid-cols-1 xl:grid-cols-3 items-center justify-items-center gap-4 mt-10 z-10 w-full">
                     <div className="hidden h-auto xl:block xl:justify-self-end">
                         <Image
                             src={'/laptop-falling.svg'}
@@ -101,7 +101,7 @@ const WhatToExpectSection = () => {
                     </div>
                 </div>
 
-                <h2 className="text-3xl font-semibold text-center mt-12 md:z-10 font-rethink-sans">
+                <h2 className="text-3xl font-semibold text-center md:z-10 font-rethink-sans">
                     HOW TO PARTICIPATE
                 </h2>
 
