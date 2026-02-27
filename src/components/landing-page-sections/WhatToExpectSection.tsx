@@ -112,6 +112,7 @@ const WhatToExpectSection = () => {
                         title="Hacker"
                         description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
                         buttonText="Apply"
+                        buttonLink="/registration/hacker"
                         disabled={false}
                     />
 

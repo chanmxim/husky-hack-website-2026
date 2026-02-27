@@ -1,6 +1,6 @@
 export default function SponsorContactLink() {
     return (
-        <p className="text-sm flex flex-col items-center">
+        <p className="text-sm flex flex-col items-center text-white">
             Interested in sponsoring? Contact us at <br />
             <span className="text-center">
                 <span> </span>
