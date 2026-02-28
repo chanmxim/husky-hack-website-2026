@@ -10,7 +10,7 @@ export default function ScheduleSection() {
                         Our schedule is ...
                     </h3>
                     {/* Placeholder for schedule details */}
-                    <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-sm font-rethink-sans">COMING SOON</h2>
+                    <h2 className="text-5xl md:text-7xl font-bold text-[#F9C355] mb-6 drop-shadow-sm font-rethink-sans">COMING SOON</h2>
                 </div>
             </div>
 

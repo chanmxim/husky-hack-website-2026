@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FAQSection() {
     return (
-        <section id="FAQ" className="relative pb-40 pt-20 bg-[#1A663C]">
+        <section id="FAQ" className="relative pb-80 pt-20 bg-[#1A663C]">
             <div className="absolute left-0 top-0 z-20 w-full -translate-y-full pointer-events-none">
                 <Image
                     src="/faq/top-wave.svg"
@@ -15,20 +15,32 @@ export default function FAQSection() {
                     aria-hidden="true"
                 />
             </div>
-            <h1 className="text-xl  md:text-2xl font-rethink-sans text-center mb-10 text-white">FREQUENTLY ASKED QUESTIONS</h1>
+            <h1 className="text-xl  md:text-2xl font-rethink-sans text-center mb-10 text-white">FREQUENTLY ASKED
+                QUESTIONS</h1>
 
             <div className="flex flex-col justify-center items-center md:flex-row-reverse gap-4 w-full ">
 
-                <div className="flex flex-col gap-4 w-[50vw] items-start">
+                <div className="flex flex-col gap-4 w-[50vw] items-start z-20">
                     {faqs.map((faq, index) => (
 
                         <div className="bg-[#5E4527] rounded-lg w-[50vw]" key={index}>
                             <FAQAccordion
                                 question={faq.question}
-                                answer={faq.answer} />
+                                answer={faq.answer}/>
                         </div>
                     ))}
                 </div>
+
+            </div>
+            <div className="absolute left-0 bottom-0 z-10 w-full ">
+                <Image
+                    src="/faq/signs-trees.svg"
+                    alt=""
+                    width={1}
+                    height={1}
+                    className="h-auto w-full"
+                    aria-hidden="true"
+                />
             </div>
         </section>
     );
