@@ -21,7 +21,7 @@ export default function AboutUsSection() {
         <section
             className="relative w-full lg:pb-20 px-8 lg:px-0
             overflow-hidden flex flex-col items-center justify-center
-            bg-[#1C6D41] scroll-mt-40"
+            bg-[#1C6D41] scroll-mt-40 pt-5"
             id="About-Us"
         >
             <div className="relative z-10 flex flex-row items-end justify-between w-full lg:w-[95%]">
