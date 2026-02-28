@@ -32,9 +32,21 @@ export default function FAQSection() {
                 </div>
 
             </div>
-            <div className="absolute left-0 bottom-0 z-10 w-full ">
+            <div className="absolute left-0 bottom-0 z-10 w-full">
+
                 <Image
-                    src="/faq/signs-trees.svg"
+                    src="/faq/trees.svg"
+                    alt=""
+                    width={1}
+                    height={1}
+                    className="h-auto w-full"
+                    aria-hidden="true"
+                />
+
+            </div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-30">
+                <Image
+                    src="/faq/sign.svg"
                     alt=""
                     width={1}
                     height={1}
