@@ -4,25 +4,23 @@ import { useState } from "react";
 import logo from "../assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { DiscordIcon, EmailIcon, InstagramIcon, LinkedInIcon } from "./icons"
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-lg border-white/20">
-      <div className="bg-[#08182D] h-24 px-[5vw] text-white">
-        <div className="flex h-full items-center justify-between">
+      <div className="bg-[#08182D] h-20 px-[5vw] text-white">
+        <div className="grid grid-cols-[1fr_auto_1fr] h-full items-center">
 
           {/* Left Section */}
-          <a href="../" className="flex items-center gap-[0.5vw]">
-            <Image src={logo} alt="Logo" width={58} height={58} />
-            <p className="font-[Rethink Sans] text-[#FED571] font-bold text-3xl w-fit">
-              Husky Hack
-            </p>
+          <a href="../" className="flex items-center gap-[0.5vw] w-fit">
+            <Image src={logo} alt="Logo" width={50} height={50} />
           </a>
 
           {/* Centre Section*/}
-          <div className="hidden md:flex items-center gap-[clamp(1vw,5vw,4vw)] font-[Instrument Sans] font-semibold">
+          <div className="hidden md:flex items-center gap-[clamp(1vw,5vw,4vw)] font-[Instrument Sans]">
             <Link href="#About-Us" className="hover:text-[#FED571] transition">About</Link>
             <Link href="#Schedule" className="hover:text-[#FED571] transition">Schedule</Link>
             <Link href="#Sponsors" className="hover:text-[#FED571] transition">Sponsors</Link>
@@ -30,22 +28,25 @@ export default function NavBar() {
           </div>
 
           {/* Right Section */}
-          <div className="hidden md:flex items-center gap-[1vw] font-semibold">
-            <Link href="/contact"  className="px-8 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition">
-              <p className="font-[Instrument Sans] font-semibold">Contact</p>
+          <div className="hidden md:flex items-center justify-end gap-6">
+            <Link href={process.env.NEXT_PUBLIC_DISCORD_INVITE_URL} >
+              <DiscordIcon className="hover:text-[#FED571] transition" size={24} />
             </Link>
-            {/* <Link
-              href="#JoinUs"
-              className="px-8 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition"
-            >
-            <p className="">Join Us</p>
-            </Link> */}
+            <Link href={"mailto:info.huskyhack@gmail.com"} >
+              <EmailIcon className="hover:text-[#FED571] transition" size={24} />
+            </Link>
+            <Link href={"https://www.instagram.com/husky.hack"} >
+              <InstagramIcon className="hover:text-[#FED571] transition" size={24} />
+            </Link>
+            <Link href={"https://www.linkedin.com/company/husky-hack"}>
+              <LinkedInIcon className="hover:text-[#FED571] transition" size={24} />
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden relative w-8 h-8 flex flex-col items-center justify-center group"
+            className="md:hidden col-start-3 justify-self-end relative w-8 h-8 flex flex-col items-center justify-center group"
           >
             <div className="relative w-6 h-5 flex flex-col justify-between">
               <span
@@ -69,25 +70,35 @@ export default function NavBar() {
       </div>
 
       {/* Mobile Dropdown Menu */}
-      {open && (
-        <div className="md:hidden bg-[#08182D] border-t border-white/20 ease-in-out">
-          <div className="flex flex-col items-center gap-6 py-6 font-semibold text-white">
-            <a href="#About-Us" onClick={() => setOpen(false)}>About</a>
-            <a href="#Schedule" onClick={() => setOpen(false)}>Schedule</a>
-            <a href="#Sponsors" onClick={() => setOpen(false)}>Sponsors</a>
-            <a href="#FAQ" onClick={() => setOpen(false)}>FAQ</a>
-            <a href="#Contact-Us" onClick={() => setOpen(false)}>Contact us</a>
+      {
+        open && (
+          <div className="md:hidden bg-[#08182D] ease-in-out">
+            <div className="flex flex-col items-start gap-6 py-6 px-8 text-white">
+              <a href="#About-Us" onClick={() => setOpen(false)}>About</a>
+              <a href="#Schedule" onClick={() => setOpen(false)}>Schedule</a>
+              <a href="#Sponsors" onClick={() => setOpen(false)}>Sponsors</a>
+              <a href="#FAQ" onClick={() => setOpen(false)}>FAQ</a>
 
-            <a
-              href="#JoinUs"
-              onClick={() => setOpen(false)}
-              className="px-10 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full"
-            >
-              Join Us
-            </a>
+              <hr className="w-full border-white/40" />
+
+              <div className="flex items-center gap-6">
+                <a href={process.env.NEXT_PUBLIC_DISCORD_INVITE_URL}>
+                  <DiscordIcon className="hover:text-[#FED571] transition" size={24} />
+                </a>
+                <a href={"mailto:info.huskyhack@gmail.com"}>
+                  <EmailIcon className="hover:text-[#FED571] transition" size={24} />
+                </a>
+                <a href={"https://www.instagram.com/husky.hack"}>
+                  <InstagramIcon className="hover:text-[#FED571] transition" size={24} />
+                </a>
+                <a href={"https://www.linkedin.com/company/husky-hack"}>
+                  <LinkedInIcon className="hover:text-[#FED571] transition" size={24} />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
-    </nav>
+        )
+      }
+    </nav >
   );
 }

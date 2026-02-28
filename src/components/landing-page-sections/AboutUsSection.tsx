@@ -1,13 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import danielCampus from "../../assets/gbp-daniels-campus.png";
+import campus from "../../assets/gbp-waterfront-campus.png";
 import studentsLearning from "../../assets/gbp-students-learning.png";
+
+function DiscordCustomIcon() {
+    return (
+        <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="h-[18px] w-[18px] shrink-0"
+            fill="currentColor"
+        >
+            <path d="M20.3 4.37A19.8 19.8 0 0 0 15.42 2.8a.07.07 0 0 0-.07.03c-.21.37-.45.86-.62 1.24a18.4 18.4 0 0 0-5.46 0 12.7 12.7 0 0 0-.63-1.24.07.07 0 0 0-.07-.03c-1.74.3-3.39.84-4.88 1.57a.06.06 0 0 0-.03.02C.54 8.9-.27 13.3.12 17.64a.08.08 0 0 0 .03.05c1.9 1.4 3.74 2.25 5.54 2.8a.08.08 0 0 0 .09-.03c.42-.58.8-1.2 1.12-1.86a.08.08 0 0 0-.04-.11 13 13 0 0 1-1.76-.84.08.08 0 0 1-.01-.13c.12-.09.25-.19.36-.29a.07.07 0 0 1 .08-.01c3.7 1.7 7.7 1.7 11.35 0a.07.07 0 0 1 .08.01c.12.1.24.2.36.29a.08.08 0 0 1-.01.13c-.56.33-1.15.61-1.76.84a.08.08 0 0 0-.04.11c.33.65.7 1.28 1.12 1.86a.08.08 0 0 0 .09.03c1.8-.55 3.64-1.4 5.54-2.8a.08.08 0 0 0 .03-.05c.47-5.03-.79-9.39-3.52-13.24a.06.06 0 0 0-.03-.03ZM8.73 14.98c-1.1 0-2-.99-2-2.2 0-1.22.89-2.2 2-2.2 1.12 0 2.02.99 2 2.2 0 1.22-.89 2.2-2 2.2Zm6.54 0c-1.1 0-2-.99-2-2.2 0-1.22.89-2.2 2-2.2 1.12 0 2.02.99 2 2.2 0 1.22-.88 2.2-2 2.2Z" />
+        </svg>
+    );
+}
+
 export default function AboutUsSection() {
     return (
         <section
             className="relative w-full lg:pb-20 px-8 lg:px-0
             overflow-hidden flex flex-col items-center justify-center
-            bg-[#1C6D41] "
+            bg-[#1C6D41] scroll-mt-40 pt-5"
             id="About-Us"
         >
             <div className="relative z-10 flex flex-row items-end justify-between w-full lg:w-[95%]">
@@ -15,9 +29,8 @@ export default function AboutUsSection() {
                     <Image
                         src={studentsLearning}
                         alt="GBP Students Learning"
-                        className="w-[90%] h-[90%] object-cover"
+                        className="w-[80%] h-[80%] object-cover"
                         width={800}
-                        height={800}
                     />
                 </div>
                 <div className="flex-1 w-full flex flex-col items-center gap-4 md:w-1/2 pb-0 xl:pb-20">
@@ -27,7 +40,7 @@ export default function AboutUsSection() {
                     <h1 className="font-bold text-4xl md:text-6xl text-[#FED571] text-center font-rethink font-base">
                         George Brown Polytechnic's largest student-run hackathon
                     </h1>
-                    <p className="italic text-lg text-gray-300 text-center font-instrument md:not-italic md:text-xl">
+                    <p className="italic text-lg text-gray-200 text-center font-instrument md:not-italic md:text-xl">
                         Spend <strong className="text-white">24 hours</strong>{" "}
                         in the heart of Toronto building something you're
                         passionate about, food and caffeine is on us.{" "}
@@ -38,11 +51,10 @@ export default function AboutUsSection() {
                 </div>
                 <div className="hidden w-1/4 h-auto xl:block">
                     <Image
-                        src={danielCampus}
-                        alt="Daniels Campus"
+                        src={campus}
+                        alt="GBP Waterfront Campus"
                         className="w-[90%] h-[90%] object-cover"
                         width={800}
-                        height={800}
                     />
                 </div>
             </div>
@@ -52,16 +64,14 @@ export default function AboutUsSection() {
                     <Image
                         src={studentsLearning}
                         alt="GBP Students Learning"
-                        className="absolute inset-0 z-10 w-full h-full object-contain translate-x-12 translate-y-12 md:translate-x-16 md:translate-y-16"
+                        className="absolute inset-0 z-0 w-full h-full object-contain translate-x-12 translate-y-12 md:translate-x-16 md:translate-y-16"
                         width={800}
-                        height={800}
                     />
                     <Image
-                        src={danielCampus}
-                        alt="Daniels Campus"
-                        className="absolute inset-0 z-0 w-full h-full object-contain -translate-x-12 -translate-y-12 md:-translate-x-16 md:-translate-y-16"
+                        src={campus}
+                        alt="GBP Waterfront Campus"
+                        className="absolute inset-0 z-10 w-full h-full object-contain -translate-x-12 -translate-y-12 md:-translate-x-16 md:-translate-y-16"
                         width={800}
-                        height={800}
                     />
                 </div>
             </div>
@@ -84,11 +94,17 @@ export default function AboutUsSection() {
                     width={796}
                     height={202}
                 />
+                {/* <p className="italic absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-transparent bg-clip-text bg-gradient-to-b from-gray-100 via-gray-200/50 to-transparent">
+                    Where curious minds find their pack
+                </p> */}
                 <Link
-                    href="/contact"
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-8 py-4 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition"
+                    href="/discord"
+                    className="absolute top-1/2 left-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 
+                    px-4 py-3
+                    md:px-8 md:py-4 rounded-full border-2 border-[#A6D6B8]/70 bg-[#1E5A37]/85 text-white transition hover:bg-[#287246]/90 hover:border-[#C2E6CF]"
                 >
-                    <p className="font-[Instrument Sans] text-sm">Build with us</p>
+                    <DiscordCustomIcon />
+                    <span className="font-rethink-sans text-sm tracking-wide whitespace-nowrap ">Join Our Discord!</span>
                 </Link>
             </div>
 

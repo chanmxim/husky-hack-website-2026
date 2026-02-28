@@ -100,37 +100,39 @@ const WhatToExpectSection = () => {
                         />
                     </div>
                 </div>
+                <section id="Participate" className="scroll-mt-40">
+                    <h2 className="text-3xl font-semibold text-center md:z-10 font-rethink-sans">
+                        HOW TO PARTICIPATE
+                    </h2>
 
-                <h2 className="text-3xl font-semibold text-center md:z-10 font-rethink-sans">
-                    HOW TO PARTICIPATE
-                </h2>
+                    {/* Section 2: Hacker, Mentor, Sponsor Cards */}
+                    <div className="relative z-10 flex flex-col lg:flex-row justify-center gap-8 w-full max-w-6xl mx-auto px-4 items-center">
+                        <RoleCard
+                            image={'/husky-hack-hacker-logo.svg'}
+                            title="Hacker"
+                            description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
+                            buttonText="Apply"
+                            buttonLink="/registration/hacker"
+                            disabled={false}
+                        />
+                      
+                        <RoleCard
+                            image={'/husky-hack-mentor-logo.svg'}
+                            title="Mentor"
+                            description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead hackers toward their 'aha' moments."
+                            buttonText="Apply"
+                            disabled={true}
+                        />
 
-                {/* Section 2: Hacker, Mentor, Sponsor Cards */}
-                <div className="relative z-10 flex flex-col lg:flex-row justify-center gap-8 w-full max-w-6xl mx-auto px-4 items-center">
-                    <RoleCard
-                        image={'/husky-hack-hacker-logo.svg'}
-                        title="Hacker"
-                        description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
-                        buttonText="Apply"
-                        disabled={false}
-                    />
-
-                    <RoleCard
-                        image={'/husky-hack-mentor-logo.svg'}
-                        title="Mentor"
-                        description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead campers toward their 'aha' moments."
-                        buttonText="Apply"
-                        disabled={true}
-                    />
-
-                    <RoleCard
-                        image={'/husky-hack-sponsor-logo.svg'}
-                        title="Sponsor"
-                        description="Fuel the adventure. Equip our campers with resources, showcase your brand, and scout for the next generation of tech talent."
-                        buttonText="Apply"
-                        buttonLink="/contact"
-                    />
-                </div>
+                        <RoleCard
+                            image={'/husky-hack-sponsor-logo.svg'}
+                            title="Judge"
+                            description="Evaluate the projects. Review the teams' final builds, score technical achievements, and select the winning hacks."
+                            buttonText="Apply"
+                            disabled={true}
+                        />
+                    </div>
+                </section>
             </div>
         </div>
     );

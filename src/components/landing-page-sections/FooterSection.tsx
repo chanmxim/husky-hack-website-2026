@@ -123,16 +123,10 @@ export default function FooterSection() {
                                 Resources
                             </h3>
                             <a
-                                href="/construction"
+                                href="/code-of-conduct"
                                 className="text-gray-900 hover:text-white transition-colors"
                             >
                                 Code of Conduct
-                            </a>
-                            <a
-                                href="/construction"
-                                className="text-gray-900 hover:text-white transition-colors"
-                            >
-                                Privacy Policy
                             </a>
                         </div>
                     </div>

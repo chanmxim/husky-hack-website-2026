@@ -1,30 +1,37 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Minus, Plus } from "lucide-react";
 
 type AccordionProps = {
     question: string;
     answer: string;
+    collapseTrigger?: number;
 };
 
-function FAQAccordion({ question, answer }: AccordionProps) {
+function FAQAccordion({ question, answer, collapseTrigger }: AccordionProps) {
     const [accordionOpen, setAccordionOpen] = useState<boolean>(false);
     const contentRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        if (collapseTrigger !== undefined && collapseTrigger > 0) {
+            setAccordionOpen(false);
+        }
+    }, [collapseTrigger]);
+
     return (
-        <div className={"w-full flex-col border-black border-2 px-4 py-2 "}>
+        <div className="w-full flex-col py-2">
             <button
                 onClick={() => setAccordionOpen((prev) => !prev)}
                 className={`flex justify-between items-center text-left group w-full 
-                    text-gray-300
-                    ${accordionOpen ? "pb-4" : "pb-0"}`}
+                    text-white
+                    ${accordionOpen ? "pb-4" : "pb-2"}`}
                 aria-expanded={accordionOpen}
             >
-                <h3 className="text-xl md:text-3xl font-instrument-sans font-bold text-gray-100">{question}</h3>
+                <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-white pr-4">{question}</h3>
 
                 {/* Icon */}
-                <div className="group-hover:opacity-100">
+                <div className="group-hover:opacity-100 text-white shrink-0">
                     {!accordionOpen ? <Plus /> : <Minus />}
                 </div>
             </button>
@@ -40,7 +47,7 @@ function FAQAccordion({ question, answer }: AccordionProps) {
                 }}
                 className={`transition-[max-height] duration-300 ease-in-out overflow-hidden grid`}
             >
-                <div className="overflow-hidden text-gray-200 text-md md:text-lg leading-relaxed px-1 py-2">
+                <div className="overflow-hidden text-white/90 font-rethink-sans text-base md:text-lg leading-relaxed pt-1 pb-4">
                     {answer}
                 </div>
             </div>
