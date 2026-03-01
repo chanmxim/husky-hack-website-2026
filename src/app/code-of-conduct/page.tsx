@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BackButton from "../../components/BackButton";
 
 export default function CodeOfConductPage() {
     const incidentReportOnsite = process.env.COC_INCIDENT_REPORT_ONSITE ?? "Locate a HuskyHack organizer.";
@@ -29,6 +30,10 @@ export default function CodeOfConductPage() {
             </div>
 
             <div className="relative z-10 mx-auto flex min-h-[100dvh] w-full max-w-4xl items-center px-6 py-16 md:px-10">
+                <div className="absolute top-4 left-4 z-20">
+                    <BackButton />
+                </div>
+
                 <div className="w-full rounded-xl border border-white/15 bg-black/20 p-6 backdrop-blur-sm md:p-10">
                     <h1 className="mb-6 text-3xl font-semibold tracking-tight md:text-4xl">Code of Conduct</h1>
 
