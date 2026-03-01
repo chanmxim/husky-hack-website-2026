@@ -85,11 +85,11 @@ const RoleCard = ({
                             borderWidth: "3px",
                         }}
                     >
-                        <h3 className="text-2xl md:text-3xl font-bold text-white pb-1 mb-1 w-full font-rethink">
+                        <h3 className="text-2xl md:text-3xl font-semibold text-white pb-1 mb-1 w-full font-rethink">
                             {title}
                         </h3>
 
-                        <p className="text-white mb-4 text-md leading-relaxed font-instrument-sans">
+                        <p className="text-white mb-4 text-md leading-relaxed font-instrument">
                             {description}
                         </p>
 
@@ -102,7 +102,7 @@ const RoleCard = ({
                             >
                                 <button
                                     disabled={disabled}
-                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink"
+                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink"
                                     style={{
                                         backgroundColor: borderBadgeColor,
                                         border: `2px solid ${borderBadgeColor}`,

@@ -48,7 +48,7 @@ function FAQAccordion({ question, answer, collapseTrigger }: AccordionProps) {
                 }}
                 className={`transition-[max-height] duration-300 ease-in-out overflow-hidden grid`}
             >
-                <div className="overflow-hidden text-white/90 font-rethink text-base md:text-lg leading-relaxed pt-1 pb-4">
+                <div className="overflow-hidden text-white/90 font-instrument text-base md:text-lg leading-relaxed pt-1 pb-4">
                     {answer}
                 </div>
             </div>

@@ -20,7 +20,7 @@ export default function FooterSection() {
                             <br />
                             <span className="font-bold">HuskyHack</span> team
                         </p>
-                        <p className="text-gray-900 font-rethink mt-3 font-medium">
+                        <p className="text-gray-900 font-instrument mt-3 font-medium">
                             © {new Date().getFullYear()} HuskyHack
                         </p>
 
@@ -69,7 +69,7 @@ export default function FooterSection() {
                 {/* RIGHT COLUMN: Links & Big Text */}
                 <div className="flex flex-col justify-between w-full lg:w-7/12 h-full">
                     {/* Top: Links Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4 font-instrument">
                         <div className="flex flex-col gap-3">
                             <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
                                 Info

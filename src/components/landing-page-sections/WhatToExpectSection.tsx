@@ -30,7 +30,7 @@ const FeatureCard = ({
         <h3 className="text-xl md:text-2xl font-bold text-[#fbbf24] mb-2 font-rethink">
             {title}
         </h3>
-        <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument-sans">
+        <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument">
             {description}
         </p>
     </div>

@@ -83,7 +83,7 @@ export default function TeamGrid({
                                                 {teamMember.displayName}
                                             </h4>
                                             {teamMember.position && (
-                                                <p className="mt-1 text-[10px] sm:text-xs text-gray-300 leading-tight font-rethink truncate">
+                                                <p className="mt-1 text-[10px] sm:text-xs text-gray-300 leading-tight font-instrument truncate">
                                                     {teamMember.position}
                                                 </p>
                                             )}

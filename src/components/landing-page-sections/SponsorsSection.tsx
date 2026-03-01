@@ -11,7 +11,7 @@ export default function SponsorsSection() {
 
                 <div className="flex justify-center">
                     <div className=" relative py-4 px-4">
-                        <h1 className="text-2xl md:text-6xl text-center font-rethink font-bold text-[#F9C355]">
+                        <h1 className="text-2xl md:text-6xl text-center font-rethink font-semibold text-[#F9C355]">
                             Our Sponsors
                         </h1>
                     </div>
