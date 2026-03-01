@@ -4,9 +4,9 @@ import SilverSponsorCard from "./SilverSponsorCard";
 import sponsors from "../../data/sponsors.json";
 
 function SponsorLayout() {
-    const goldSponsors = sponsors.filter(s => s.tier === 'gold');
-    const silverSponsors = sponsors.filter(s => s.tier === 'silver');
-    const bronzeSponsors = sponsors.filter(s => s.tier === 'bronze');
+    const goldSponsors = sponsors.tiers.find((tier) => tier.id === "gold")?.sponsors ?? [];
+    const silverSponsors = sponsors.tiers.find((tier) => tier.id === "silver")?.sponsors ?? [];
+    const bronzeSponsors = sponsors.tiers.find((tier) => tier.id === "bronze")?.sponsors ?? [];
 
     const hasSponsors = goldSponsors.length > 0 || silverSponsors.length > 0 || bronzeSponsors.length > 0;
 
