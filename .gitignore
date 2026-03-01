@@ -42,6 +42,8 @@ dist-ssr
 /.pnp
 .pnp.js
 
+/.cursor
+
 # testing
 /coverage
 

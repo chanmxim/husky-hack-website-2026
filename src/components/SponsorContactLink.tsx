@@ -8,8 +8,9 @@ export default function SponsorContactLink() {
                     href="mailto:outreact.huskyhack@gmail.com"
                     className="underline text-amber-300"
                 >
-                    outreach.huskyhack@gmail.com!
+                    outreach.huskyhack@gmail.com
                 </a>
+                !
             </span>
         </p>
     );
