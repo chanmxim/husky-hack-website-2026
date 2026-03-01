@@ -21,10 +21,9 @@ export default function HeroSection() {
     return (
         <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-40 text-white">
             <div className="z-20 text-center px-4 flex flex-col items-center">
-                <h1 className="text-6xl md:text-8xl font-bold font-rethink">
-                    <span className="text-[#FED571]">HuskyHack</span>
+                <h1 className="font-rethink text-[#FED571] font-bold text-6xl md:text-8xl text-center">
+                    HuskyHack
                 </h1>
-
 
                 <p className="text-white text-lg md:text-xl pt-5">
                     May 1-2, 2026 

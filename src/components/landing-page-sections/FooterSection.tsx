@@ -132,9 +132,13 @@ export default function FooterSection() {
                     </div>
 
                     {/* Bottom: Big Text  */}
-                    <div className="w-full pt-12 lg:mt-auto">
-                        <p className="font-rethink text-[#1E2024] font-medium tracking-[-0.05em] text-center lg:text-left lg:-translate-x-3 text-[15vw] lg:text-[9vw] leading-none select-none">
+                    <div className="w-full pt-12 gap-4 lg:gap-2 flex flex-col items-start
+                    lg:mt-auto">
+                        <p className="font-rethink text-[#1E2024] font-bold tracking-[-0.05em] text-center lg:text-left lg:-translate-x-3 text-[15vw] lg:text-[9vw] leading-none select-none">
                             HuskyHack
+                        </p>
+                        <p className="font-instrument text-gray-900/80 text-center lg:text-left text-md ">
+                            Where curious minds find their pack
                         </p>
                     </div>
                 </div>
