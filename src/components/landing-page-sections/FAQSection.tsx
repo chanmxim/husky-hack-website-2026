@@ -15,7 +15,7 @@ export default function FAQSection() {
     const handleCollapseAll = () => setCollapseTrigger(prev => prev + 1);
 
     return (
-        <section id="FAQ" className="relative pb-80 pt-20 bg-[#1A663C]">
+        <section id="FAQ" className="relative pt-20 bg-[#1A663C] overflow-hidden">
             <div className="absolute left-0 top-0 z-20 w-full -translate-y-full pointer-events-none">
                 <Image
                     src="/faq/top-wave.svg"
@@ -32,46 +32,6 @@ export default function FAQSection() {
                     FREQUENTLY ASKED QUESTIONS
                 </h1>
 
-{/* <<<<<<< FE-151-modify-sched-sponsor
-                <div className="flex flex-col gap-4 w-[50vw] items-start z-20">
-                    {faqs.map((faq, index) => (
-
-                        <div className="bg-[#5E4527] rounded-lg w-[50vw]" key={index}>
-                            <FAQAccordion
-                                question={faq.question}
-                                answer={faq.answer}/>
-                        </div>
-                    ))}
-                </div>
-
-            </div>
-            <div className="absolute left-0 bottom-0 z-10 w-full">
-
-                <Image
-                    src="/faq/trees.svg"
-                    alt=""
-                    width={1}
-                    height={1}
-                    className="h-auto w-full"
-                    aria-hidden="true"
-                />
-
-            </div>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-30">
-                <Image
-                    src="/faq/sign.svg"
-                    alt=""
-                    width={1}
-                    height={1}
-                    className="h-auto w-full"
-                    aria-hidden="true"
-                /> --> */}
-                {/*   <button
-                    onClick={handleCollapseAll}
-                    className="mb-12 px-6 py-2 rounded-full border border-white/50 text-white font-rethink-sans hover:bg-white/10 transition-colors duration-200"
-                >
-                    Collapse All
-                </button> */}
 
                 <div className="w-full flex flex-col md:flex-row gap-6 md:gap-16 mb-12">
                     <div className="flex flex-col flex-1 gap-4">
@@ -100,10 +60,37 @@ export default function FAQSection() {
 
                 <button
                     onClick={handleCollapseAll}
-                    className="px-6 py-2 rounded-full border border-white/50 text-white font-rethink-sans hover:bg-white/10 transition-colors duration-200"
+                    className="px-6 py-2 text-gray-300 hover:text-white underline font-rethink-sans transition-colors duration-200"
                 >
                     Collapse All
                 </button>
+            </div>
+
+            <div className="relative mt-16 h-44 w-full bg-gradient-to-b from-[#1A663C] to-[#4F743C]">
+                <Image
+                    src="/faq/left-tree.svg"
+                    alt=""
+                    width={1}
+                    height={1}
+                    className="absolute bottom-0 left-0 z-10 h-auto w-24 md:w-36"
+                    aria-hidden="true"
+                />
+                <Image
+                    src="/faq/right-tree.svg"
+                    alt=""
+                    width={1}
+                    height={1}
+                    className="absolute bottom-0 right-0 z-10 h-auto w-24 md:w-36"
+                    aria-hidden="true"
+                />
+                <Image
+                    src="/faq/sign.svg"
+                    alt="HuskyHack sign"
+                    width={1}
+                    height={1}
+                    className="absolute bottom-0 left-1/2 z-20 h-auto w-[22rem] -translate-x-1/2 md:w-[28rem]"
+                    aria-hidden="true"
+                />
             </div>
         </section>
     );
