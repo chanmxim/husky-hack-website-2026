@@ -27,8 +27,8 @@ export default function FAQSection() {
                 />
             </div>
         
-            <div className="w-full max-w-6xl mx-auto px-6 md:px-12 flex flex-col items-center">
-                <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 mb-8 font-rethink-sans text-[#FED571]">
+            <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
+                <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 mb-14 font-rethink-sans text-[#FED571]">
                     FREQUENTLY ASKED QUESTIONS
                 </h1>
 
