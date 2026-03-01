@@ -25,7 +25,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
             className="h-16 md:h-20 flex flex-col justify-center px-5"
         >
             <h2
-                className="text-lg md:text-xl font-rethink-sans font-light text-white truncate"
+                className="text-lg md:text-xl font-rethink font-light text-white truncate"
             >
                 {title}
             </h2>

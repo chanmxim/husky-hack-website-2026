@@ -15,12 +15,12 @@ export default function FooterSection() {
                 {/* LEFT COLUMN: Branding & Logo */}
                 <div className="flex flex-col items-start justify-between w-full lg:w-5/12 h-full">
                     <div>
-                        <p className="text-gray-900 font-rethink-sans text-3xl md:text-4xl font-medium leading-tight">
+                        <p className="text-gray-900 font-rethink text-3xl md:text-4xl font-medium leading-tight">
                             Made with love by the
                             <br />
                             <span className="font-bold">HuskyHack</span> team
                         </p>
-                        <p className="text-gray-900 font-rethink-sans mt-3 font-medium">
+                        <p className="text-gray-900 font-rethink mt-3 font-medium">
                             © {new Date().getFullYear()} HuskyHack
                         </p>
 
@@ -71,7 +71,7 @@ export default function FooterSection() {
                     {/* Top: Links Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4">
                         <div className="flex flex-col gap-3">
-                            <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-gray-900 mb-1">
+                            <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
                                 Info
                             </h3>
                             <a
@@ -101,7 +101,7 @@ export default function FooterSection() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-gray-900 mb-1">
+                            <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
                                 Contact
                             </h3>
                             <a
@@ -119,7 +119,7 @@ export default function FooterSection() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-gray-900 mb-1">
+                            <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
                                 Resources
                             </h3>
                             <a
@@ -133,7 +133,7 @@ export default function FooterSection() {
 
                     {/* Bottom: Big Text  */}
                     <div className="w-full pt-12 lg:mt-auto">
-                        <p className="font-rethink-sans text-[#1E2024] font-medium tracking-[-0.05em] text-center lg:text-left lg:-translate-x-3 text-[15vw] lg:text-[9vw] leading-none select-none">
+                        <p className="font-rethink text-[#1E2024] font-medium tracking-[-0.05em] text-center lg:text-left lg:-translate-x-3 text-[15vw] lg:text-[9vw] leading-none select-none">
                             HuskyHack
                         </p>
                     </div>

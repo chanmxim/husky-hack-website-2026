@@ -85,7 +85,7 @@ const RoleCard = ({
                             borderWidth: "3px",
                         }}
                     >
-                        <h3 className="text-2xl md:text-3xl font-bold text-white pb-1 mb-1 w-full font-rethink-sans">
+                        <h3 className="text-2xl md:text-3xl font-bold text-white pb-1 mb-1 w-full font-rethink">
                             {title}
                         </h3>
 
@@ -102,7 +102,7 @@ const RoleCard = ({
                             >
                                 <button
                                     disabled={disabled}
-                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink-sans"
+                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink"
                                     style={{
                                         backgroundColor: borderBadgeColor,
                                         border: `2px solid ${borderBadgeColor}`,
@@ -115,7 +115,7 @@ const RoleCard = ({
                             <div className="w-full max-w-[200px] mx-auto">
                                 <button
                                     disabled={disabled}
-                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink-sans"
+                                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-12 rounded-full transition-all duration-200 ease-out hover:brightness-90 hover:-translate-y-0.5 disabled:hover:brightness-100 disabled:hover:translate-y-0 mt-auto font-rethink"
                                     style={{
                                         backgroundColor: borderBadgeColor,
                                         border: `2px solid ${borderBadgeColor}`,

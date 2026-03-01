@@ -37,7 +37,7 @@ export default function TeamGrid({
             )}
             {groupedMembers.map((group) => (
                 <div key={group.title} className="w-full flex flex-col items-center">
-                    <h3 className="text-2xl font-light font-rethink-sans text-white mb-8">
+                    <h3 className="text-2xl font-light font-rethink text-white mb-8">
                         {group.title}
                     </h3>
 
@@ -83,7 +83,7 @@ export default function TeamGrid({
                                                 {teamMember.displayName}
                                             </h4>
                                             {teamMember.position && (
-                                                <p className="mt-1 text-[10px] sm:text-xs text-gray-300 leading-tight font-rethink-sans truncate">
+                                                <p className="mt-1 text-[10px] sm:text-xs text-gray-300 leading-tight font-rethink truncate">
                                                     {teamMember.position}
                                                 </p>
                                             )}

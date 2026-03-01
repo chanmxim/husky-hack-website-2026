@@ -44,7 +44,7 @@ export default function HeroSection() {
                         href="/registration/hacker"
                         className="px-8 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition"
                     >
-                        <span className="font-rethink-sans text-sm">Apply Now!</span>
+                        <span className="font-rethink text-sm">Apply Now!</span>
                     </Link>
                     <p className="text-sm text-gray-300">Applications close April 4th.</p>
                 </div>

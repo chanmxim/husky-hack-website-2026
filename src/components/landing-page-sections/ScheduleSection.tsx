@@ -6,11 +6,11 @@ export default function ScheduleSection() {
             {/* Left Content (Text) */}
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
                 <div className="flex flex-col justify-center">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-6 drop-shadow-sm font-rethink-sans">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-6 drop-shadow-sm font-rethink">
                         Our schedule is ...
                     </h3>
                     {/* Placeholder for schedule details */}
-                    <h2 className="text-5xl md:text-7xl font-bold text-[#F9C355] mb-6 drop-shadow-sm font-rethink-sans">COMING SOON</h2>
+                    <h2 className="text-5xl md:text-7xl font-bold text-[#F9C355] mb-6 drop-shadow-sm font-rethink">COMING SOON</h2>
                 </div>
             </div>
 

@@ -32,7 +32,7 @@ function FAQAccordion({ question, answer, collapseTrigger }: AccordionProps) {
                 <div className="group-hover:opacity-100 text-white shrink-0 pr-2">
                     {!accordionOpen ? <Plus /> : <Minus />}
                 </div>
-                <h3 className="text-xl md:text-2xl font-rethink-sans font-bold text-white pr-4 break-words leading-tight">
+                <h3 className="text-xl md:text-2xl font-rethink font-semibold text-white pr-4 break-words leading-tight">
                     {question}
                 </h3>
             </button>
@@ -48,7 +48,7 @@ function FAQAccordion({ question, answer, collapseTrigger }: AccordionProps) {
                 }}
                 className={`transition-[max-height] duration-300 ease-in-out overflow-hidden grid`}
             >
-                <div className="overflow-hidden text-white/90 font-rethink-sans text-base md:text-lg leading-relaxed pt-1 pb-4">
+                <div className="overflow-hidden text-white/90 font-rethink text-base md:text-lg leading-relaxed pt-1 pb-4">
                     {answer}
                 </div>
             </div>

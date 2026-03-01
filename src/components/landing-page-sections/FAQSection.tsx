@@ -28,7 +28,7 @@ export default function FAQSection() {
             </div>
         
             <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
-                <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 mb-14 font-rethink-sans text-[#FED571]">
+                <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 mb-14 font-rethink text-[#FED571]">
                     FREQUENTLY ASKED QUESTIONS
                 </h1>
 
@@ -60,7 +60,7 @@ export default function FAQSection() {
 
                 <button
                     onClick={handleCollapseAll}
-                    className="px-6 py-2 text-gray-300 hover:text-white underline font-rethink-sans transition-colors duration-200"
+                    className="px-6 py-2 text-gray-300 hover:text-white underline font-rethink transition-colors duration-200"
                 >
                     Collapse All
                 </button>
