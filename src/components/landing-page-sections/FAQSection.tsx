@@ -15,7 +15,7 @@ export default function FAQSection() {
     const handleCollapseAll = () => setCollapseTrigger(prev => prev + 1);
 
     return (
-        <section id="FAQ" className="relative pt-20 bg-[#1A663C] overflow-hidden">
+        <section id="FAQ" className="relative bg-[#1A663C]">
             <div className="absolute left-0 top-0 z-20 w-full -translate-y-full pointer-events-none">
                 <Image
                     src="/faq/top-wave.svg"
