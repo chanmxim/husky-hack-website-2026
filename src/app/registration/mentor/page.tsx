@@ -5,8 +5,8 @@ import Link from "next/link";
 import Script from "next/script";
 import BackButton from "../../../components/BackButton";
 
-export default function HackerRegistration() {
-    const opnFormId = process.env.NEXT_PUBLIC_OPNFORM_HACKER_FORM_ID;
+export default function MentorRegistration() {
+    const opnFormId = process.env.NEXT_PUBLIC_OPNFORM_MENTOR_FORM_ID;
     const opnFormBaseUrl = process.env.NEXT_PUBLIC_OPNFORM_BASE_URL ?? "https://opnform.com";
     const opnFormSrc = opnFormId ? `${opnFormBaseUrl}/forms/${opnFormId}` : "";
     const opnFormWidgetSrc = `${opnFormBaseUrl}/widgets/iframe.min.js`;
@@ -39,8 +39,8 @@ export default function HackerRegistration() {
                     <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-4">
                         <BackButton className="pointer-events-auto" />
                         <nav className="pointer-events-auto flex items-center gap-3 text-xs md:text-sm">
-                            <Link href="/registration/mentor" className="text-white/70 transition hover:text-[#FED571]">
-                                Mentor Application
+                            <Link href="/registration/hacker" className="text-white/70 transition hover:text-[#FED571]">
+                                Hacker Application
                             </Link>
                             <span className="text-white/35">|</span>
                             <Link href="/registration/judge" className="text-white/70 transition hover:text-[#FED571]">
@@ -68,7 +68,9 @@ export default function HackerRegistration() {
                 ) : (
                     <div className="grid h-full w-full place-items-center p-6 text-center text-sm md:text-base">
                         <div>
-                            <p>The application for hackers is coming soon.</p>
+                            <p>
+                                The application for <span className="text-[#FFE9A9]">mentors</span> is coming soon.
+                            </p>
                         </div>
                     </div>
                 )}

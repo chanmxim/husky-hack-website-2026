@@ -37,6 +37,10 @@ const FeatureCard = ({
 );
 
 const WhatToExpectSection = () => {
+    const isHackerRegistrationOpen = Boolean(process.env.NEXT_PUBLIC_OPNFORM_HACKER_FORM_ID);
+    const isMentorRegistrationOpen = Boolean(process.env.NEXT_PUBLIC_OPNFORM_MENTOR_FORM_ID);
+    const isJudgeRegistrationOpen = Boolean(process.env.NEXT_PUBLIC_OPNFORM_JUDGE_FORM_ID);
+
     return (
         <div>
             <div>
@@ -112,8 +116,8 @@ const WhatToExpectSection = () => {
                             title="Hacker"
                             description="Pack up your gear. Join us for 24 hours of designing, programming, and building to earn your badges and claim the top prize."
                             buttonText="Apply"
-                            buttonLink="/registration/hacker"
-                            disabled={false}
+                            buttonLink={isHackerRegistrationOpen ? "/registration/hacker" : undefined}
+                            disabled={!isHackerRegistrationOpen}
                         />
                       
                         <RoleCard
@@ -121,7 +125,8 @@ const WhatToExpectSection = () => {
                             title="Mentor"
                             description="Be a Trail Guide. Share your expertise, help teams navigate technical challenges, and lead hackers toward their 'aha' moments."
                             buttonText="Apply"
-                            disabled={true}
+                            buttonLink={isMentorRegistrationOpen ? "/registration/mentor" : undefined}
+                            disabled={!isMentorRegistrationOpen}
                         />
 
                         <RoleCard
@@ -129,7 +134,8 @@ const WhatToExpectSection = () => {
                             title="Judge"
                             description="Evaluate the projects. Review the teams' final builds, score technical achievements, and select the winning hacks."
                             buttonText="Apply"
-                            disabled={true}
+                            buttonLink={isJudgeRegistrationOpen ? "/registration/judge" : undefined}
+                            disabled={!isJudgeRegistrationOpen}
                         />
                     </div>
                 </section>
