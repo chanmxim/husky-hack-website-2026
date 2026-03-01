@@ -27,13 +27,12 @@ export default function FAQSection() {
                 />
             </div>
         
-            <h1 className="text-xl  md:text-2xl font-rethink-sans text-center mb-10 text-white">FREQUENTLY ASKED
-                QUESTIONS</h1>
-
             <div className="w-full max-w-6xl mx-auto px-6 md:px-12 flex flex-col items-center">
-                <h1 className="text-3xl md:text-5xl font-rethink-sans text-center mb-8 font-light tracking-tight text-[#FED571]">FREQUENTLY ASKED QUESTIONS</h1>
+                <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 mb-8 font-rethink-sans text-[#FED571]">
+                    FREQUENTLY ASKED QUESTIONS
+                </h1>
 
-<!-- <<<<<<< FE-151-modify-sched-sponsor
+{/* <<<<<<< FE-151-modify-sched-sponsor
                 <div className="flex flex-col gap-4 w-[50vw] items-start z-20">
                     {faqs.map((faq, index) => (
 
@@ -66,7 +65,7 @@ export default function FAQSection() {
                     height={1}
                     className="h-auto w-full"
                     aria-hidden="true"
-                /> -->
+                /> --> */}
                 {/*   <button
                     onClick={handleCollapseAll}
                     className="mb-12 px-6 py-2 rounded-full border border-white/50 text-white font-rethink-sans hover:bg-white/10 transition-colors duration-200"
