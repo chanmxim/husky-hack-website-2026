@@ -10,17 +10,17 @@ import {
 
 export default function FooterSection() {
     return (
-        <footer id="Footer" className="pt-10 bg-[#1E2024] flex flex-col">
+        <footer id="Footer" className="pt-10 bg-[#1E2024] flex flex-col font-semibold font-instrument">
             <div className="bg-[#FF7703] rounded-tl-3xl rounded-tr-3xl px-6 py-10 md:px-16 md:py-16 flex flex-col lg:flex-row gap-10 lg:gap-20 min-h-[500px]">
                 {/* LEFT COLUMN: Branding & Logo */}
                 <div className="flex flex-col items-start justify-between w-full lg:w-5/12 h-full">
                     <div>
-                        <p className="text-gray-900 font-rethink text-3xl md:text-4xl font-medium leading-tight">
+                        <p className="text-gray-900 font-instrument text-3xl md:text-4xl font-semibold leading-tight">
                             Made with love by the
                             <br />
                             <span className="font-bold">HuskyHack</span> team
                         </p>
-                        <p className="text-gray-900 font-instrument mt-3 font-medium">
+                        <p className="text-gray-900 font-instrument mt-3 font-semibold">
                             © {new Date().getFullYear()} HuskyHack
                         </p>
 
@@ -29,7 +29,7 @@ export default function FooterSection() {
                                 href={process.env.NEXT_PUBLIC_DISCORD_INVITE_URL || ""}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-900 hover:text-white transition-colors duration-300"
+                                className="font-instrument font-semibold text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon icon={DiscordIcon} size={24} />
                             </a>
@@ -37,7 +37,7 @@ export default function FooterSection() {
                                 href={socialLinks.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-900 hover:text-white transition-colors duration-300"
+                                className="font-instrument font-semibold text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon
                                     icon={Linkedin01Icon}
@@ -48,7 +48,7 @@ export default function FooterSection() {
                                 href={socialLinks.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-900 hover:text-white transition-colors duration-300"
+                                className="font-instrument font-semibold text-gray-900 hover:text-white transition-colors duration-300"
                             >
                                 <HugeiconsIcon icon={InstagramIcon} size={24} />
                             </a>
@@ -69,32 +69,32 @@ export default function FooterSection() {
                 {/* RIGHT COLUMN: Links & Big Text */}
                 <div className="flex flex-col justify-between w-full lg:w-7/12 h-full">
                     {/* Top: Links Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-4 font-instrument">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 font-instrument">
                         <div className="flex flex-col gap-3">
                             <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
                                 Info
                             </h3>
                             <a
                                 href="#About-Us"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 About Us
                             </a>
                             <a
                                 href="#Sponsors"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 Sponsors
                             </a>
                             <a
                                 href="#FAQ"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 FAQ
                             </a>
                             <a
                                 href="#Team"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 Our Team
                             </a>
@@ -106,13 +106,13 @@ export default function FooterSection() {
                             </h3>
                             <a
                                 href="/contact?query=support"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 Support
                             </a>
                             <a
                                 href="/contact?query=sponsorship"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 Sponsorship
                             </a>
@@ -124,10 +124,28 @@ export default function FooterSection() {
                             </h3>
                             <a
                                 href="/code-of-conduct"
-                                className="text-gray-900 hover:text-white transition-colors"
+                                className="font-instrument font-medium underline text-gray-900 hover:text-white transition-colors"
                             >
                                 Code of Conduct
                             </a>
+                        </div>
+
+                        <div className="flex flex-col gap-3">
+                            <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
+                                Apply
+                            </h3>
+                            <a
+                                href="/registration/hacker"
+                                className="font-instrument font-semibold underline text-gray-900 hover:text-white transition-colors"
+                            >
+                                Apply as Hacker
+                            </a>
+                            <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
+                                Apply as Mentor
+                            </span>
+                            <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
+                                Apply as Judge
+                            </span>
                         </div>
                     </div>
 
@@ -137,7 +155,7 @@ export default function FooterSection() {
                         <p className="font-rethink text-[#1E2024] font-bold tracking-[-0.05em] text-center lg:text-left lg:-translate-x-3 text-[15vw] lg:text-[9vw] leading-none select-none">
                             HuskyHack
                         </p>
-                        <p className="font-instrument text-gray-900/80 text-center lg:text-left text-md ">
+                        <p className="font-instrument font-semibold text-gray-900/80 text-center lg:text-left text-md ">
                             Where curious minds find their pack
                         </p>
                     </div>

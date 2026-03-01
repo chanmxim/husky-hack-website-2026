@@ -27,7 +27,7 @@ const FeatureCard = ({
         >
             <Image src={image} alt={title} className={imageClassName} />
         </div>
-        <h3 className="text-xl md:text-2xl font-bold text-[#fbbf24] mb-2 font-rethink">
+        <h3 className="text-xl md:text-2xl font-bold text-[#FED571] mb-2 font-rethink">
             {title}
         </h3>
         <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument">
@@ -87,7 +87,7 @@ const WhatToExpectSection = () => {
                             height={400}
                         />
                     </div>
-                    <h3 className="text-xl md:text-2xl italic font-rethink text-center xl:col-start-2 text-[#fbbf24]">
+                    <h3 className="text-xl md:text-2xl italic font-rethink text-center xl:col-start-2 text-[#FED571]">
                         And more along the journey...
                     </h3>
                     <div className="hidden h-auto xl:block xl:justify-self-start">
