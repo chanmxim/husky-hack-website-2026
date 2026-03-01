@@ -9,6 +9,10 @@ import {
 } from "@hugeicons/core-free-icons";
 
 export default function FooterSection() {
+    const isHackerRegistrationOpen = Boolean(process.env.NEXT_PUBLIC_OPNFORM_HACKER_FORM_ID);
+    const isMentorRegistrationOpen = Boolean(process.env.NEXT_PUBLIC_OPNFORM_MENTOR_FORM_ID);
+    const isJudgeRegistrationOpen = Boolean(process.env.NEXT_PUBLIC_OPNFORM_JUDGE_FORM_ID);
+
     return (
         <footer id="Footer" className="pt-10 bg-[#1E2024] flex flex-col font-semibold font-instrument">
             <div className="bg-[#FF7703] rounded-tl-3xl rounded-tr-3xl px-6 py-10 md:px-16 md:py-16 flex flex-col lg:flex-row gap-10 lg:gap-20 min-h-[500px]">
@@ -134,18 +138,42 @@ export default function FooterSection() {
                             <h3 className="text-xl md:text-2xl font-rethink font-bold text-gray-900 mb-1">
                                 Apply
                             </h3>
-                            <a
-                                href="/registration/hacker"
-                                className="font-instrument font-semibold underline text-gray-900 hover:text-white transition-colors"
-                            >
-                                Apply as Hacker
-                            </a>
-                            <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
-                                Apply as Mentor
-                            </span>
-                            <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
-                                Apply as Judge
-                            </span>
+                            {isHackerRegistrationOpen ? (
+                                <a
+                                    href="/registration/hacker"
+                                    className="font-instrument font-semibold underline text-gray-900 hover:text-white transition-colors"
+                                >
+                                    Apply as Hacker
+                                </a>
+                            ) : (
+                                <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
+                                    Apply as Hacker
+                                </span>
+                            )}
+                            {isMentorRegistrationOpen ? (
+                                <a
+                                    href="/registration/mentor"
+                                    className="font-instrument font-semibold underline text-gray-900 hover:text-white transition-colors"
+                                >
+                                    Apply as Mentor
+                                </a>
+                            ) : (
+                                <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
+                                    Apply as Mentor
+                                </span>
+                            )}
+                            {isJudgeRegistrationOpen ? (
+                                <a
+                                    href="/registration/judge"
+                                    className="font-instrument font-semibold underline text-gray-900 hover:text-white transition-colors"
+                                >
+                                    Apply as Judge
+                                </a>
+                            ) : (
+                                <span className="font-instrument font-semibold text-gray-700/70 cursor-not-allowed">
+                                    Apply as Judge
+                                </span>
+                            )}
                         </div>
                     </div>
 
