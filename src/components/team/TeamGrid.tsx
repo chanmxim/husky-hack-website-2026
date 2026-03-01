@@ -13,47 +13,40 @@ interface TeamMember {
 interface TeamGroup {
     title: string;
     members: TeamMember[];
+    color?: string;
 }
 
 export default function TeamGrid({
     groupedMembers,
+    onShowLess,
 }: {
     groupedMembers: TeamGroup[];
+    onShowLess?: () => void;
 }) {
     return (
-        <div className="space-y-16 animate-fade-in">
+        <div className="space-y-24 animate-fade-in">
+            {onShowLess && (
+                <div className="flex justify-center mt-10 ">
+                    <a
+                        onClick={onShowLess}
+                        className="text-white underline text-sm cursor-pointer hover:text-gray-300 transition-colors"
+                    >
+                        Show Less
+                    </a>
+                </div>
+            )}
             {groupedMembers.map((group) => (
-                <div key={group.title} className="w-full">
-                    <h3 className="text-2xl font-bold font-rethink text-center mb-8 text-white relative inline-block w-full">
-                        <span className="relative z-10 bg-[#1C6D41] px-4">
-                            {group.title}
-                        </span>
-                        <div className="absolute top-1/2 left-0 w-full h-px bg-gray-500 z-0 transform -translate-y-1/2"></div>
+                <div key={group.title} className="w-full flex flex-col items-center">
+                    <h3 className="text-2xl font-light font-rethink text-white mb-8">
+                        {group.title}
                     </h3>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-items-center">
+                    <div className="flex w-full flex-wrap justify-center gap-2 sm:gap-3 max-w-[90%] mx-auto">
                         {group.members
-                            .sort((a, b) => {
-                                const getRank = (position: string) => {
-                                    const pos = position.toLowerCase();
-                                    if (pos.includes("co-lead")) return 0;
-                                    if (pos.includes("lead")) return 1;
-                                    return 2;
-                                };
-
-                                const rankA = getRank(a.position);
-                                const rankB = getRank(b.position);
-
-                                if (rankA !== rankB) return rankA - rankB;
-
-                                return a.displayName.localeCompare(
-                                    b.displayName,
-                                );
-                            })
                             .map((teamMember, index) => (
                                 <div
                                     key={`${teamMember.displayName}-${index}`}
-                                    className="group flex flex-col items-center w-full max-w-[160px]"
+                                    className="group flex flex-col items-center w-[100px] sm:w-[140px] flex-shrink-0"
                                 >
                                     <a
                                         href={
@@ -70,30 +63,30 @@ export default function TeamGrid({
                                                 : ""
                                         }
                                         className={`flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 ${
-                                            !teamMember.socialLink
-                                                ? "cursor-default"
-                                                : ""
+                                            teamMember.socialLink
+                                                ? "cursor-pointer"
+                                                : "cursor-default"
                                         }`}
                                     >
-                                        <div className="relative mb-3">
-                                            <TeamMemberPhoto
-                                                mainProfilePicturePath={
-                                                    teamMember.mainProfilePicturePath
-                                                }
-                                                secondaryProfilePicturePath={
-                                                    teamMember.secondaryProfilePicturePath
-                                                }
-                                                className="w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
-                                            />
-                                        </div>
+                                        <TeamMemberPhoto
+                                            mainProfilePicturePath={
+                                                teamMember.mainProfilePicturePath
+                                            }
+                                            secondaryProfilePicturePath={
+                                                teamMember.secondaryProfilePicturePath
+                                            }
+                                            className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-lg sm:rounded-[30px] shadow-md object-cover transition-shadow duration-300 group-hover:shadow-white/20"
+                                        />
 
-                                        <div className="text-center">
-                                            <h4 className="font-bold text-sm sm:text-base text-white leading-tight mb-1 font-rethink">
+                                        <div className="text-center w-full mt-2">
+                                            <h4 className="font-bold text-xs sm:text-sm md:text-base text-white leading-tight font-rethink truncate">
                                                 {teamMember.displayName}
                                             </h4>
-                                            <p className="text-xs sm:text-sm text-gray-300 font-medium px-2 font-instrument">
-                                                {teamMember.position}
-                                            </p>
+                                            {teamMember.position && (
+                                                <p className="mt-1 text-sm md:text-md text-gray-300 leading-tight font-instrument truncate">
+                                                    {teamMember.position}
+                                                </p>
+                                            )}
                                         </div>
                                     </a>
                                 </div>
