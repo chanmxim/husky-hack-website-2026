@@ -1,1 +1,28 @@
-[ ]
+{
+  "tiers": [
+    {
+      "id": "gold",
+      "label": "Gold Sponsors",
+      "description": "Top-tier partners helping power HuskyHack.",
+      "sponsors": []
+    },
+    {
+      "id": "silver",
+      "label": "Silver Sponsors",
+      "description": "Supporters helping us create a smooth hacker experience.",
+      "sponsors": []
+    },
+    {
+      "id": "bronze",
+      "label": "Bronze Sponsors",
+      "description": "Community supporters backing student builders.",
+      "sponsors": []
+    },
+    {
+      "id": "in-kind",
+      "label": "In-Kind Partners",
+      "description": "Partners supporting HuskyHack with tools, services, and resources.",
+      "sponsors": []
+    }
+  ]
+}

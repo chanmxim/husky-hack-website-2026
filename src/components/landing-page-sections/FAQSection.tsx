@@ -32,7 +32,6 @@ export default function FAQSection() {
                     FREQUENTLY ASKED QUESTIONS
                 </h1>
 
-
                 <div className="w-full flex flex-col md:flex-row gap-6 md:gap-16 mb-12">
                     <div className="flex flex-col flex-1 gap-4">
                         {leftFaqs.map((faq, index) => (
