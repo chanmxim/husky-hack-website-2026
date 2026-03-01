@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +8,51 @@ import { DiscordIcon, EmailIcon, InstagramIcon, LinkedInIcon } from "./icons"
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
+
+  useEffect(() => {
+    if (open) {
+      setIsVisible(true);
+    }
+  }, [open]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const delta = currentScrollY - lastScrollY.current;
+          const directionThreshold = 8;
+
+          if (currentScrollY <= 20 || delta < -directionThreshold || open) {
+            setIsVisible(true);
+          } else if (delta > directionThreshold) {
+            setIsVisible(false);
+          }
+
+          lastScrollY.current = currentScrollY;
+          ticking.current = false;
+        });
+
+        ticking.current = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [open]);
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-lg border-white/20">
+    <nav
+      className={`sticky top-0 z-50 backdrop-blur-lg border-white/20 transition-transform duration-300 ease-out will-change-transform ${isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+    >
       <div className="bg-[#08182D] h-20 px-[5vw] text-white">
         <div className="grid grid-cols-[1fr_auto_1fr] h-full items-center">
 
