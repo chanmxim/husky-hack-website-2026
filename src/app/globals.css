@@ -19,3 +19,7 @@ html {
 .animate-scroll {
   animation: scroll 70s linear infinite;
 }
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
