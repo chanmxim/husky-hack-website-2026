@@ -2,10 +2,12 @@
 import { BookOpen, MessageSquare, MoveRight, MoveLeft } from "lucide-react";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default function ContactSection() {
+    const pathname = usePathname();
     const query = useSearchParams().get("query") || "support";
+    const contactType = query === "sponsorship" || query === "sponsor" ? "sponsorship" : "support";
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -16,7 +18,7 @@ export default function ContactSection() {
         const body = form.body.value;
 
         const recipientEmail =
-            query === "sponsorship"
+            contactType === "sponsorship"
                 ? "outreach.huskyhack@gmail.com"
                 : "info.huskyhack@gmail.com";
 
@@ -31,77 +33,89 @@ export default function ContactSection() {
     }
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center p-6 relative">
-            <Link
-                href="/"
-                className="absolute top-8 left-8 flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-            >
-                <MoveLeft size={20} />
-                <span className="font-serif text-lg">Back</span>
-            </Link>
+        <div className="relative flex min-h-screen items-center justify-center px-6 py-16 font-rethink">
+            <div className="w-full max-w-3xl">
+                <Link
+                    href="/"
+                    className="mb-6 inline-flex items-center gap-2 text-[#FED571] transition-colors hover:text-white"
+                >
+                    <MoveLeft size={18} />
+                    <span className="text-base">Back</span>
+                </Link>
 
-            <div className="flex flex-col md:flex-row gap-12 items-start justify-center max-w-4xl w-full">
-                <header className="text-left px-4 md:w-1/3">
-                    <h2 className="text-4xl text-gray-900 font-serif">
-                        {query === "sponsorship"
+                <header className="text-left">
+                    <div className="mb-5 flex w-fit items-center gap-2 rounded-full border border-white/20 p-1">
+                        <Link
+                            href={`${pathname}?query=support`}
+                            className={`rounded-full px-4 py-2 text-sm transition-colors ${
+                                contactType === "support"
+                                    ? "bg-[#FED571] text-[#08182D]"
+                                    : "text-white/75 hover:text-white"
+                            }`}
+                        >
+                            Support
+                        </Link>
+                        <Link
+                            href={`${pathname}?query=sponsorship`}
+                            className={`rounded-full px-4 py-2 text-sm transition-colors ${
+                                contactType === "sponsorship"
+                                    ? "bg-[#FED571] text-[#08182D]"
+                                    : "text-white/75 hover:text-white"
+                            }`}
+                        >
+                            Sponsor
+                        </Link>
+                    </div>
+
+                    <h2 className="text-4xl font-semibold text-[#FED571]">
+                        {contactType === "sponsorship"
                             ? "Sponsorship & Partnerships Contact"
                             : "Support Contact"}
                     </h2>
-                    <p className="text-gray-500 text-lg leading-relaxed">
+                    <p className="mt-4 text-lg leading-relaxed text-white/75">
                         We'd love to hear from you. Fill out the details and
                         we'll be in touch.
                     </p>
                 </header>
 
-                <form
-                    onSubmit={handleSubmit}
-                    className="flex flex-col gap-2 px-3 md:w-2/3 w-full"
-                >
-                    {/* Subject */}
-                    <div className="flex items-center gap-2 rounded-full bg-gray-200 p-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-blue-400 border border-transparent">
-                        <div className="flex items-center gap-3 bg-white rounded-full px-4 py-3 w-full">
-                            <BookOpen size={20} className="text-gray-400" />
+                <div className="w-full pt-10">
+                    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-6">
+                        <div className="flex items-center gap-3 rounded-xl border border-white/30 p-4 transition-colors focus-within:border-[#FED571]">
+                            <BookOpen size={18} className="text-[#FED571]/85" />
                             <input
                                 type="text"
                                 name="subject"
                                 required
                                 placeholder="Subject"
-                                className="bg-transparent w-full focus:outline-none text-gray-900 placeholder:text-gray-400 text-lg"
+                                className="w-full bg-transparent text-lg text-white placeholder:text-white/45 focus:outline-none"
                             />
                         </div>
-                    </div>
 
-                    {/* Body Textarea */}
-                    <div className="flex items-start gap-2 rounded-[2rem] bg-gray-200 p-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-blue-400 border border-transparent">
-                        <div className="flex items-start gap-3 bg-white rounded-[1.8rem] p-4 w-full h-full">
-                            <MessageSquare
-                                size={20}
-                                className="text-gray-400 mt-1"
-                            />
+                        <div className="flex items-start gap-3 rounded-xl border border-white/30 p-4 transition-colors focus-within:border-[#FED571]">
+                            <MessageSquare size={18} className="mt-1 text-[#FED571]/85" />
                             <textarea
                                 name="body"
                                 required
                                 rows={8}
                                 placeholder="Your message..."
-                                className="bg-transparent w-full focus:outline-none text-gray-900 resize-none placeholder:text-gray-400 text-lg leading-relaxed"
+                                className="w-full resize-none bg-transparent text-lg leading-relaxed text-white placeholder:text-white/45 focus:outline-none"
                             />
                         </div>
-                    </div>
 
-                    {/* Submit Button */}
-                    <div className="flex justify-end">
-                        <button
-                            type="submit"
-                            className="group flex items-center gap-3 bg-gray-900 py-4 px-8 rounded-full font-bold text-white hover:bg-gray-800 transition-all duration-300 active:scale-95"
-                        >
-                            <span>Send Email</span>
-                            <MoveRight
-                                className="transition-transform duration-300 group-hover:translate-x-1"
-                                size={20}
-                            />
-                        </button>
-                    </div>
-                </form>
+                        <div className="flex justify-end">
+                            <button
+                                type="submit"
+                                className="group flex items-center gap-2 rounded-full border border-[#FED571] px-7 py-3 text-[#FED571] transition-all duration-300 hover:bg-[#FED571] hover:text-[#08182D]"
+                            >
+                                <span>Send Email</span>
+                                <MoveRight
+                                    className="transition-transform duration-300 group-hover:translate-x-1"
+                                    size={18}
+                                />
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );
