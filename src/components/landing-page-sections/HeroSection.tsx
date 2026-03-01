@@ -21,32 +21,24 @@ export default function HeroSection() {
     return (
         <section className="relative w-full min-h-[90vh] bg-[#243B5C] overflow-hidden flex flex-col items-center justify-start pt-48 md:pt-40 text-white">
             <div className="z-20 text-center px-4 flex flex-col items-center">
-                <h1 className="text-6xl md:text-8xl font-bold">
-                    <span className="text-[#FED571]">HuskyHack</span>
+                <h1 className="font-rethink text-[#FED571] font-bold text-6xl md:text-8xl text-center">
+                    HuskyHack
                 </h1>
 
-
                 <p className="text-white text-lg md:text-xl pt-5">
-                    {/* <Calendar className="inline text-gray-400 mx-2" />  */}
                     May 1-2, 2026 
                     <span className="text-gray-400 mx-2">•</span>
-                    {/* <MapPin className="inline text-gray-400 mx-2" />  */}
                     George Brown Polytechnic, Waterfront
-                    {/* George Brown Polytechnic's student-run 24h hackathon */}
                 </p>
-
-                {/* <p className="text-base text-gray-300 pt-1">
-                    May 1-2, 2026 <MapPin className="inline" color="#FED571" /> George Brown Polytechnic,  Waterfront
-                </p> */}
 
                 <div className="mt-10 flex flex-col items-center gap-2">
                     <Link
                         href="/registration/hacker"
                         className="px-8 py-3 bg-[#FF7703] text-black border-2 border-[#A63C06] rounded-full hover:brightness-110 transition"
                     >
-                        <span className="font-rethink-sans text-sm">Apply Now!</span>
+                        <span className="font-rethink text-md font-semibold">Apply Now!</span>
                     </Link>
-                    <p className="text-sm text-gray-300">Applications close April 4th.</p>
+                    <p className="text-md text-gray-300">Applications close April 4th.</p>
                 </div>
 
                 <div className="mt-5 flex flex-col items-center">

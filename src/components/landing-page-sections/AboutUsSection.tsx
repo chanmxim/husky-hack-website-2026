@@ -94,9 +94,6 @@ export default function AboutUsSection() {
                     width={796}
                     height={202}
                 />
-                {/* <p className="italic absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-transparent bg-clip-text bg-gradient-to-b from-gray-100 via-gray-200/50 to-transparent">
-                    Where curious minds find their pack
-                </p> */}
                 <Link
                     href="/discord"
                     className="absolute top-1/2 left-1/2 inline-flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 
@@ -104,7 +101,7 @@ export default function AboutUsSection() {
                     md:px-8 md:py-4 rounded-full border-2 border-[#A6D6B8]/70 bg-[#1E5A37]/85 text-white transition hover:bg-[#287246]/90 hover:border-[#C2E6CF]"
                 >
                     <DiscordCustomIcon />
-                    <span className="font-rethink-sans text-sm tracking-wide whitespace-nowrap ">Join Our Discord!</span>
+                    <span className="font-rethink text-md font-semibold tracking-wide whitespace-nowrap ">Join Our Discord!</span>
                 </Link>
             </div>
 

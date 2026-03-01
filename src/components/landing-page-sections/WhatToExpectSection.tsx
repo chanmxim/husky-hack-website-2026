@@ -27,10 +27,10 @@ const FeatureCard = ({
         >
             <Image src={image} alt={title} className={imageClassName} />
         </div>
-        <h3 className="text-xl md:text-2xl font-bold text-[#fbbf24] mb-2 font-rethink-sans">
+        <h3 className="text-xl md:text-2xl font-bold text-[#FED571] mb-2 font-rethink">
             {title}
         </h3>
-        <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument-sans">
+        <p className="text-gray-300 text-sm md:text-base max-w-xs mx-auto font-instrument">
             {description}
         </p>
     </div>
@@ -48,7 +48,7 @@ const WhatToExpectSection = () => {
                     height={1}
                 />
             </div>
-            <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 font-rethink-sans">
+            <h1 className="relative z-10 text-3xl font-semibold text-center mt-14 font-rethink">
                 WHAT TO EXPECT
             </h1>
 
@@ -87,7 +87,7 @@ const WhatToExpectSection = () => {
                             height={400}
                         />
                     </div>
-                    <h3 className="text-xl md:text-2xl italic font-rethink-sans text-center xl:col-start-2 text-[#fbbf24]">
+                    <h3 className="text-xl md:text-2xl italic font-rethink text-center xl:col-start-2 text-[#FED571]">
                         And more along the journey...
                     </h3>
                     <div className="hidden h-auto xl:block xl:justify-self-start">
@@ -101,7 +101,7 @@ const WhatToExpectSection = () => {
                     </div>
                 </div>
                 <section id="Participate" className="scroll-mt-40">
-                    <h2 className="text-3xl font-semibold text-center md:z-10 font-rethink-sans">
+                    <h2 className="text-3xl font-semibold text-center md:z-10 font-rethink">
                         HOW TO PARTICIPATE
                     </h2>
 

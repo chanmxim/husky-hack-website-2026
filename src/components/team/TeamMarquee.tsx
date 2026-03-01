@@ -25,7 +25,7 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
             className="h-16 md:h-20 flex flex-col justify-center px-5"
         >
             <h2
-                className="text-lg md:text-xl font-rethink-sans font-light text-white truncate"
+                className="text-lg md:text-xl font-rethink font-light text-white truncate"
             >
                 {title}
             </h2>
@@ -47,11 +47,11 @@ export default function TeamMarquee({ teams }: { teams: Team[] }) {
                     >
                         <div className="absolute -top-10 left-1/2 -translate-x-1/2 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
                             <div className="bg-[#1C6D41] text-white text-xs font-bold py-1 px-3 rounded shadow-lg whitespace-nowrap relative">
-                                <div className="text-center mb-1">
+                                <div className="text-center mb-1 text-sm">
                                     {member.displayName}
                                 </div>
                                 {member.position && (
-                                    <div className="text-center font-medium text-[10px]">
+                                    <div className="text-center font-medium text-xs">
                                         {member.position}
                                     </div>
                                 )}
