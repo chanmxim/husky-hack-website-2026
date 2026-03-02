@@ -38,7 +38,7 @@ export default function HeroSection() {
                     >
                         <span className="font-rethink text-md font-semibold">Apply Now!</span>
                     </Link>
-                    <p className="text-md text-gray-300">Applications close April 4th.</p>
+                    <p className="text-md text-gray-300">Applications close March 25th.</p>
                 </div>
 
                 <div className="mt-5 flex flex-col items-center">
